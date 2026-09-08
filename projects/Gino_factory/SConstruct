@@ -1,0 +1,93 @@
+import os
+import sys
+import rtconfig
+
+if os.getenv('RTT_ROOT'):
+    RTT_ROOT = os.getenv('RTT_ROOT')
+else:
+    RTT_ROOT = None
+    for path in [
+        os.path.join(os.getcwd(), 'rt-thread'),
+        os.path.join(os.getcwd(), '..', '..', 'rt-thread'),
+        os.path.join(os.getcwd(), '..', '..', '..', '..'),
+    ]:
+        path = os.path.normpath(path)
+        if os.path.isfile(os.path.join(path, 'tools', 'building.py')):
+            RTT_ROOT = path
+            break
+    if RTT_ROOT is None:
+        RTT_ROOT = 'rt-thread'
+
+sys.path = sys.path + [os.path.join(RTT_ROOT, 'tools')]
+try:
+    from building import *
+except:
+    print('Cannot found RT-Thread root directory, please check RTT_ROOT')
+    print(RTT_ROOT)
+    exit(-1)
+
+TARGET = 'rt-thread.' + rtconfig.TARGET_EXT
+
+DefaultEnvironment(tools=[])
+env = Environment(tools = ['mingw'],
+    AS = rtconfig.AS, ASFLAGS = rtconfig.AFLAGS,
+    CC = rtconfig.CC, CFLAGS = rtconfig.CFLAGS,
+    AR = rtconfig.AR, ARFLAGS = '-rc',
+    CXX = rtconfig.CXX, CXXFLAGS = rtconfig.CXXFLAGS,
+    LINK = rtconfig.LINK, LINKFLAGS = rtconfig.LFLAGS)
+env.PrependENVPath('PATH', rtconfig.EXEC_PATH)
+
+
+if rtconfig.PLATFORM in ['iccarm']:
+    env.Replace(CCCOM = ['$CC $CFLAGS $CPPFLAGS $_CPPDEFFLAGS $_CPPINCFLAGS -o $TARGET $SOURCES'])
+    env.Replace(ARFLAGS = [''])
+    env.Replace(LINKCOM = env["LINKCOM"] + ' --map rt-thread.map')
+
+Export('env')
+Export('RTT_ROOT')
+Export('rtconfig')
+
+SDK_ROOT = os.path.abspath('./')
+
+libraries_path_prefix = SDK_ROOT + '/libraries'
+if not os.path.exists(libraries_path_prefix):
+    libraries_path_prefix = os.path.dirname(SDK_ROOT) + '/libraries'
+if not os.path.exists(libraries_path_prefix):
+    libraries_path_prefix = os.path.dirname(os.path.dirname(SDK_ROOT)) + '/libraries'
+
+SDK_LIB = libraries_path_prefix
+Export('SDK_LIB')
+
+# prepare building environment
+objs = PrepareBuilding(env, RTT_ROOT, has_libcpu=False)
+
+if GetDepend('SOC_GD32H77DIW'):
+    def is_legacy_gd32h7_path(item):
+        path = os.path.normcase(os.path.normpath(str(item)))
+        return 'gd32h7xx' in path.split(os.sep)
+
+    objs = [obj for obj in objs if not is_legacy_gd32h7_path(obj)]
+    for group in Projects:
+        group['src'] = [src for src in group['src']
+                        if not is_legacy_gd32h7_path(src)]
+        if 'CPPPATH' in group:
+            group['CPPPATH'] = [path for path in group['CPPPATH']
+                                if not is_legacy_gd32h7_path(path)]
+    env.Replace(CPPPATH=[path for path in env['CPPPATH']
+                         if not is_legacy_gd32h7_path(path)])
+
+if GetDepend('PKG_USING_GT911'):
+    for group in Projects:
+        if group['name'] == 'gt911':
+            local_defines = group.get('LOCAL_CPPDEFINES', [])
+            if 'memcpy=rt_memcpy' not in local_defines:
+                group['LOCAL_CPPDEFINES'] = local_defines + ['memcpy=rt_memcpy']
+
+# include libraries
+objs.extend(SConscript(os.path.join(libraries_path_prefix, 'gd32-arm-cmsis-latest', 'GD32H77x_78x', 'SConscript'), variant_dir='build/libraries/gd32-arm-cmsis-latest/GD32H77x_78x', duplicate=0))
+objs.extend(SConscript(os.path.join(libraries_path_prefix, 'gd32-arm-series-latest', 'GD32H77x_78x', 'SConscript'), variant_dir='build/libraries/gd32-arm-series-latest/GD32H77x_78x', duplicate=0))
+objs.extend(SConscript(os.path.join(libraries_path_prefix, 'gd32_drivers', 'SConscript'),variant_dir='build/libraries/gd32_drivers', duplicate=0))
+
+# make a building
+DoBuilding(TARGET, objs)
+

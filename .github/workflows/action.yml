@@ -1,0 +1,116 @@
+name: GD32H77D-Gino
+
+on:
+  push:
+    branches: [master, main]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - '**/figures/**'
+      - '.github/workflows/build-docs.yml'
+      - 'tools/build_docs.py'
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - '**/figures/**'
+      - '.github/workflows/build-docs.yml'
+      - 'tools/build_docs.py'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 16 1 * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firmware-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Check BSP metadata
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check SDK package YAML
+        run: |
+          python -m pip install rt-thread-studio==2.4
+          python -c "import sys; from rt_thread_studio import bsp_checker; sys.exit(0 if bsp_checker.BspChecker('.').check() else 1)"
+
+  compile:
+    name: Build ${{ matrix.bsp }}
+    needs: check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        bsp:
+          - Gino_template
+          - Gino_driver_i2c
+          - Gino_driver_spi
+          - Gino_driver_qspi_flash
+          - Gino_driver_sdcard
+          - Gino_driver_can
+          - Gino_driver_pwm
+          - Gino_driver_rtc
+          - Gino_driver_sdram
+          - Gino_driver_usb_device
+          - Gino_driver_usb_host
+          - Gino_driver_eth
+          - Gino_display_lvgl
+          - Gino_display_camera
+          - Gino_component_mqtt
+          - Gino_factory
+    env:
+      RTT_CC: gcc
+      RTT_ROOT: ${{ github.workspace }}/rt-thread
+      TOOLCHAIN: arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Cache Arm GNU toolchain
+        id: toolchain-cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/arm-toolchain
+          key: ${{ runner.os }}-${{ runner.arch }}-arm-gnu-13.3.rel1
+      - name: Download Arm GNU toolchain
+        if: steps.toolchain-cache.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 \
+            "https://github.com/RT-Thread/toolchains-ci/releases/download/v1.10/${TOOLCHAIN}.tar.xz" \
+            --output "${RUNNER_TEMP}/arm-toolchain.tar.xz"
+          mkdir -p "${RUNNER_TEMP}/arm-toolchain"
+          tar -xf "${RUNNER_TEMP}/arm-toolchain.tar.xz" -C "${RUNNER_TEMP}/arm-toolchain"
+      - name: Set up build tools
+        shell: bash
+        run: |
+          python -m pip install scons==4.8.1
+          toolchain_bin="${RUNNER_TEMP}/arm-toolchain/${TOOLCHAIN}/bin"
+          "${toolchain_bin}/arm-none-eabi-gcc" --version
+          echo "RTT_EXEC_PATH=${toolchain_bin}" >> "$GITHUB_ENV"
+      - name: Link shared sources and compile
+        working-directory: projects/${{ matrix.bsp }}
+        shell: bash
+        run: |
+          sh mklinks.sh
+          scons -j"$(nproc)"
+      - name: Upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.bsp }}-firmware
+          path: |
+            projects/${{ matrix.bsp }}/rt-thread.elf
+            projects/${{ matrix.bsp }}/rt-thread.map
+            projects/${{ matrix.bsp }}/rtthread.hex
+            projects/${{ matrix.bsp }}/rtthread.bin
+          if-no-files-found: error
+          retention-days: 14
