@@ -1,0 +1,81 @@
+from building import *
+
+cwd = GetCurrentDir()
+
+def add_src_once(source):
+    if source not in src:
+        src.append(source)
+
+src = Split('''
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_dma.c
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_exti.c
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_gpio.c
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_misc.c
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_pmu.c
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_rcu.c
+GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_syscfg.c
+''')
+
+if GetDepend(['RT_USING_SERIAL']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_usart.c']
+
+if GetDepend(['RT_USING_I2C']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_i2c.c']
+
+if GetDepend(['RT_USING_SPI']):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_spi.c')
+
+if GetDepend('RT_USING_QSPI') and GetDepend('BSP_USING_OSPI0'):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_ospi.c')
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_ospim.c')
+    if GetDepend('BSP_OSPI0_USING_MDMA'):
+        add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_mdma.c')
+
+if GetDepend(['RT_USING_CAN']):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_can.c')
+
+if GetDepend(['BSP_USING_ETH']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_enet.c']
+
+if GetDepend(['RT_USING_ADC']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_adc.c']
+
+if GetDepend(['RT_USING_DAC']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_dac.c']
+
+if GetDepend(['RT_USING_RTC']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_rtc.c']
+
+if GetDepend(['RT_USING_WDT']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_wwdgt.c']
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_fwdgt.c']
+
+if GetDepend(['RT_USING_SDIO']):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_sdio.c')
+
+if GetDepend('RT_USING_PWM'):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_timer.c')
+
+if GetDepend(['BSP_USING_SDRAM']):
+    src += ['GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_exmc.c']
+
+if GetDepend(['BSP_USING_TLI']):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_tli.c')
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_ipa.c')
+
+if GetDepend('BSP_USING_LCD_MIPI'):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_dsi.c')
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_ipa.c')
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_tli.c')
+
+if GetDepend('BSP_USING_OV7670'):
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_dci.c')
+    add_src_once('GD32H77x_78x_standard_peripheral/Source/gd32h77x_78x_timer.c')
+
+path = [cwd + '/GD32H77x_78x_standard_peripheral/Include']
+
+CPPDEFINES = ['USE_STDPERIPH_DRIVER', 'GD32H77DXW']
+
+group = DefineGroup('Libraries', src, depend = ['SOC_GD32H77DIW'], CPPPATH = path, CPPDEFINES = CPPDEFINES)
+
+Return('group')

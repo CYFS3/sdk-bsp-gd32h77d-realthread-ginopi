@@ -1,0 +1,16 @@
+import os
+from building import *
+
+Import('SDK_LIB', 'env')
+
+board_drivers_dir = os.path.join(SDK_LIB, 'Board_Drivers')
+if not os.path.isfile(os.path.join(board_drivers_dir, 'SConscript')):
+    board_drivers_dir = os.path.abspath(os.path.join(GetCurrentDir(), '..', '..', '..', 'libraries', 'Board_Drivers'))
+
+variant_dir = os.path.join(env['BSP_ROOT'], 'build', 'libraries', 'Board_Drivers')
+group = SConscript(os.path.join(variant_dir, 'SConscript'),
+                  variant_dir=variant_dir,
+                  src_dir=board_drivers_dir,
+                  duplicate=0)
+
+Return('group')
