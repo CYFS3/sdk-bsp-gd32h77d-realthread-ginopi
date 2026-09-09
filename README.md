@@ -2,6 +2,8 @@
 
 English | [中文](README_zh.md)
 
+[Online documentation](https://rt-thread-studio.github.io/sdk-bsp-gd32h77d-realthread-ginopi/latest/index_en.html) | [Local preview](docs/config/README.md)
+
 ## Overview
 
 This repository provides an RT-Thread Studio board support package for the GD32H77D Gino board, based on RT-Thread 5.3.0. Shared RT-Thread, GD32 libraries, and offline packages are combined with 16 independent projects for peripherals and application demos.
@@ -27,11 +29,11 @@ The projects cover the base template, UART, I2C, SPI, QSPI flash, SD card, CAN, 
 | Wi-Fi          | GD32VW553 AT module on UART4                                      |
 | Download       | SWD; DAP-Link/PyOCD in Studio, DAP-Link (CMSIS-DAP) in MDK |
 
-See the [project guide](docs/PROJECT_GUIDE.md) for pins, memory details, prerequisites, and example operation.
+See the [project guide](docs/project-guide/README.md) for pins, memory details, prerequisites, and example operation.
 
 ## Architecture
 
-The [architecture and principles guide](docs/ARCHITECTURE.md) explains the reset-to-RT-Thread startup chain, Kconfig/SCons generation, the RT-Thread device model, Cortex-M7 cache/DMA ownership, and the display, camera, Ethernet, Wi-Fi, storage, and MQTT data paths.
+The [architecture and principles guide](docs/architecture/README.md) explains the reset-to-RT-Thread startup chain, Kconfig/SCons generation, the RT-Thread device model, Cortex-M7 cache/DMA ownership, and the display, camera, Ethernet, Wi-Fi, storage, and MQTT data paths.
 
 ## Project Matrix
 
@@ -78,4 +80,4 @@ The `rt-thread` and `libraries` directories are shared to avoid duplicating them
 2. Check that the `rt-thread` and `libraries` folder icons appear in the project directory.
 3. Use [Env](https://club.rt-thread.org/ask/question/5699.html) to run `scons --target=mdk5` and update the MDK5 project files.
 
-Use Env 2.0 or later ([download](https://www.rt-thread.org/download.html#download-rt-thread-env-tool)). MDK uses Arm Compiler 6 and requires GigaDevice `GD32H77x_78x_DFP` 0.6.1. See the [project guide](docs/PROJECT_GUIDE.md) for the complete steps.
+Use Env 2.0 or later ([download](https://www.rt-thread.org/download.html#download-rt-thread-env-tool)). MDK uses Arm Compiler 6 and requires GigaDevice `GD32H77x_78x_DFP` 0.6.1. See the [project guide](docs/project-guide/README.md) for the complete steps.

@@ -1,6 +1,6 @@
 # GD32H77D Gino 工程使用指南
 
-[English](PROJECT_GUIDE.md) | [SDK 概览](../README_zh.md) | [架构与工作原理](ARCHITECTURE_zh.md)
+[English](README.md) | [SDK 概览](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi/blob/main/README_zh.md) | [架构与工作原理](../architecture/README_zh.md)
 
 本文介绍硬件连接、内存布局、工程创建、编译下载和示例使用方法。
 

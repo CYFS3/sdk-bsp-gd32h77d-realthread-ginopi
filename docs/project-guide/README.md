@@ -1,6 +1,6 @@
 # GD32H77D Gino Project Guide
 
-[中文](PROJECT_GUIDE_zh.md) | [SDK overview](../README.md) | [Architecture](ARCHITECTURE.md)
+[中文](README_zh.md) | [SDK overview](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi#readme) | [Architecture](../architecture/README.md)
 
 This guide covers hardware connections, memory layout, project creation, builds, downloads, and example operation.
 

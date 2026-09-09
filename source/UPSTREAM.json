@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/kurisaW/sdk_build_doc_template",
+  "revision": "6c5b5b040b45dbb936bf389d90ecbaadc32b42de",
+  "path": "source",
+  "customized_files": ["config.yaml", "conf.py"]
+}
