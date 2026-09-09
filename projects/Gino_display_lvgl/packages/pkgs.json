@@ -1,0 +1,22 @@
+[
+ {
+  "name": "LVGL",
+  "path": "/packages/multimedia/LVGL/LVGL",
+  "ver": "latest"
+ },
+ {
+  "name": "GD32_ARM_CMSIS_DRIVER",
+  "path": "/packages/peripherals/hal-sdk/gd32/gd32-arm-cmsis",
+  "ver": "latest"
+ },
+ {
+  "name": "GD32_ARM_SERIES_DRIVER",
+  "path": "/packages/peripherals/hal-sdk/gd32/gd32-arm-series",
+  "ver": "latest"
+ },
+ {
+  "name": "GT911",
+  "path": "/packages/peripherals/touch/gt911",
+  "ver": "latest"
+ }
+]

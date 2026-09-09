@@ -24,7 +24,10 @@ build/
 Debug/
 Listings/
 Objects/
-packages/
+/packages/*
+!/packages/SConscript
+!/packages/pkgs.json
+!/packages/pkgs_error.json
 RTE/
 __pycache__/
 JLinkLog.txt

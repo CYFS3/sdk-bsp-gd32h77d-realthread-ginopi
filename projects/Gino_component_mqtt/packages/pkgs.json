@@ -1,0 +1,12 @@
+﻿[
+    {
+        "path":  "/packages/iot/at_device",
+        "name":  "AT_DEVICE",
+        "ver":  "latest"
+    },
+    {
+        "path":  "/packages/iot/kawaii-mqtt",
+        "name":  "KAWAII_MQTT",
+        "ver":  "latest"
+    }
+]

@@ -1,0 +1,27 @@
+﻿[
+    {
+        "path":  "/packages/multimedia/LVGL/LVGL",
+        "name":  "LVGL",
+        "ver":  "latest"
+    },
+    {
+        "path":  "/packages/peripherals/touch/gt911",
+        "name":  "GT911",
+        "ver":  "latest"
+    },
+    {
+        "path":  "/packages/iot/at_device",
+        "name":  "AT_DEVICE",
+        "ver":  "latest"
+    },
+    {
+        "path":  "/packages/iot/kawaii-mqtt",
+        "name":  "KAWAII_MQTT",
+        "ver":  "latest"
+    },
+    {
+        "path": "/packages/peripherals/i2c-tools",
+        "name": "I2C_TOOLS",
+        "ver": "v1.0.0"
+    }
+]
