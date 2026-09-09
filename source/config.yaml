@@ -17,7 +17,7 @@ categories:
   guides:
     name: 开发指南
     name_en: Developer Guides
-    patterns: [docs/project-guide, docs/architecture]
+    patterns: [docs/project-guide]
   getting_started:
     name: 快速开始
     name_en: Getting Started

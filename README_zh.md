@@ -29,11 +29,7 @@
 | Wi-Fi      | GD32VW553 AT 模块，UART4                         |
 | 下载       | SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 DAP-Link（CMSIS-DAP） |
 
-引脚、内存、前置条件和示例操作见 [工程使用指南](docs/project-guide/README_zh.md)。
-
-## 架构说明
-
-[架构与工作原理](docs/architecture/README_zh.md) 说明从复位到 RT-Thread 启动的链路、Kconfig/SCons 生成流程、RT-Thread 设备模型、Cortex-M7 Cache/DMA ownership，以及显示、摄像头、以太网、Wi-Fi、存储和 MQTT 的数据路径。
+SDK 目录、工程选择、硬件连接和编译下载步骤见 [SDK 使用指南](docs/project-guide/README_zh.md)。
 
 ## 工程列表
 

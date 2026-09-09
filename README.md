@@ -29,11 +29,7 @@ The projects cover the base template, UART, I2C, SPI, QSPI flash, SD card, CAN, 
 | Wi-Fi          | GD32VW553 AT module on UART4                                      |
 | Download       | SWD; DAP-Link/PyOCD in Studio, DAP-Link (CMSIS-DAP) in MDK |
 
-See the [project guide](docs/project-guide/README.md) for pins, memory details, prerequisites, and example operation.
-
-## Architecture
-
-The [architecture and principles guide](docs/architecture/README.md) explains the reset-to-RT-Thread startup chain, Kconfig/SCons generation, the RT-Thread device model, Cortex-M7 cache/DMA ownership, and the display, camera, Ethernet, Wi-Fi, storage, and MQTT data paths.
+See the [SDK user guide](docs/project-guide/README.md) for the SDK directory layout, project selection, hardware connections, and build and download steps.
 
 ## Project Matrix
 

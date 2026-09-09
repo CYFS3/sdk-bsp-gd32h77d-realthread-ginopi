@@ -32,12 +32,12 @@ python build_local.py --clean --serve --port 8765
 
 - `source/config.yaml`：Gino 产品信息、文档分类、语言与 PDF 字体。
 - `source/conf.py`：保留模板配置，仅追加标题锚点配置，并关闭不适配本仓库路径的 GitHub 编辑按钮。
-- `docs/project-guide/README*.md`、`docs/architecture/README*.md`：通用指南。
+- `docs/project-guide/README*.md`：SDK 使用指南，包含目录、工程选择、硬件连接和编译下载步骤。
 - `projects/*/README*.md`：示例工程文档，保留原位置。
 - `.github/versions.json`：版本分支、显示名称、发布路径和默认版本。
 
 使用模板的 `project_catalog` 内容发现与 `categories` 导航配置，只收录明确配置的
-18 组指南和示例入口及其图片。不会扫描第三方库的 README，也不会编译 BSP。
+1 组 SDK 使用指南和 16 组示例入口及其图片。不会扫描第三方库的 README，也不会编译 BSP。
 根 README 用于 GitHub 仓库介绍；在线首页由模板根据产品信息和分类自动生成。
 
 ## 多版本发布
