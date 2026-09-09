@@ -1,8 +1,8 @@
-# GD32H77D Gino Project Guide
+# GD32H77D Gino SDK User Guide
 
-[中文](README_zh.md) | [SDK overview](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi#readme) | [Architecture](../architecture/README.md)
+[中文](README_zh.md) | [SDK overview](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi#readme)
 
-This guide covers hardware connections, memory layout, project creation, builds, downloads, and example operation.
+This guide covers the SDK directory layout, project selection, hardware connections, project creation, builds, downloads, and example operation.
 
 ## 1. Platform and Tools
 
@@ -14,6 +14,24 @@ This guide covers hardware connections, memory layout, project creation, builds,
 - Download connection: SWD with DAP-Link/PyOCD in Studio, or DAP-Link (CMSIS-DAP) in MDK.
 - Console: UART1, PA2/PA3, AF7, 115200-8-N-1.
 - Projects: 16, including `Gino_template` and 15 examples.
+
+### SDK Directory Layout
+
+The examples share the RT-Thread kernel, GD32 libraries, board drivers, and offline packages. Paths below are relative to the SDK root.
+
+| Directory | Contents |
+| --- | --- |
+| `projects/<name>/applications` | Application entry point and example code |
+| `projects/<name>/board` | Project board configuration and linker scripts |
+| `libraries/Board_Drivers` | Shared board initialization and onboard peripheral drivers |
+| `libraries/gd32_drivers` | GD32 peripheral drivers for RT-Thread |
+| `libraries/gd32-arm-*` | GD32 CMSIS, startup code, and peripheral libraries |
+| `rt-thread` | RT-Thread kernel, components, and build tools |
+| `packages` | Offline packages used by the examples |
+
+Each project has its own `.config`, `rtconfig.h`, Studio metadata, and MDK project files. Configure features in the selected project; changes to shared drivers affect all projects that use them.
+
+For a first build or a new application, start with [Gino_template](../../projects/Gino_template/README.md). To test a peripheral, select its independent example from section 6. Use [Gino_factory](../../projects/Gino_factory/README.md) for the integrated board demonstration.
 
 ## 2. Hardware Map
 
@@ -104,6 +122,8 @@ Adjust `RTT_EXEC_PATH` to the MDK installation root. Open `project.uvprojx` and 
 `template.uvprojx` and `template.uvoptx` hold the uVision defaults. SCons generates source groups, include paths, and defines from the current configuration. Regenerate the uVision project after changing configuration or source selection; generated source groups are overwritten.
 
 ## 6. Example Operation
+
+The sidebar contains each example's README with its wiring, configuration, commands, and expected results. This table summarizes the prerequisites and first operation.
 
 | Project | Prerequisite | Operation or expected behavior |
 | --- | --- | --- |

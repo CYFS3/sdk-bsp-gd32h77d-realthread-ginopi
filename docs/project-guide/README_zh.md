@@ -1,8 +1,8 @@
-# GD32H77D Gino 工程使用指南
+# GD32H77D Gino SDK 使用指南
 
-[English](README.md) | [SDK 概览](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi/blob/main/README_zh.md) | [架构与工作原理](../architecture/README_zh.md)
+[English](README.md) | [SDK 概览](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi/blob/main/README_zh.md)
 
-本文介绍硬件连接、内存布局、工程创建、编译下载和示例使用方法。
+本文介绍 SDK 目录、工程选择、硬件连接、工程创建、编译下载和示例使用方法。
 
 ## 1. 平台与开发环境
 
@@ -14,6 +14,24 @@
 - 下载接口：SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 DAP-Link（CMSIS-DAP）。
 - 控制台：UART1，PA2/PA3，AF7，115200-8-N-1。
 - 工程数量：16 个，包括 `Gino_template` 和 15 个示例。
+
+### SDK 目录
+
+各示例共享 RT-Thread 内核、GD32 库、板级驱动和离线软件包。以下路径相对于 SDK 根目录。
+
+| 目录 | 内容 |
+| --- | --- |
+| `projects/<name>/applications` | 应用入口与示例代码 |
+| `projects/<name>/board` | 工程板级配置与链接脚本 |
+| `libraries/Board_Drivers` | 共享板级初始化与板载外设驱动 |
+| `libraries/gd32_drivers` | GD32 外设的 RT-Thread 驱动 |
+| `libraries/gd32-arm-*` | GD32 CMSIS、启动代码与外设固件库 |
+| `rt-thread` | RT-Thread 内核、组件与构建工具 |
+| `packages` | 示例使用的离线软件包 |
+
+每个工程拥有独立的 `.config`、`rtconfig.h`、Studio 元数据和 MDK 工程文件。功能配置在所选工程中修改；共享驱动的修改会影响使用该驱动的其他工程。
+
+首次编译或新建应用建议从 [Gino_template](../../projects/Gino_template/README_zh.md) 开始。验证外设时，按第 6 节选择对应的独立示例；体验开发板综合功能时，使用 [Gino_factory](../../projects/Gino_factory/README_zh.md)。
 
 ## 2. 硬件映射
 
@@ -104,6 +122,8 @@ scons --target=mdk5 --project-name=project
 `template.uvprojx` 和 `template.uvoptx` 保存 uVision 默认配置。SCons 根据当前配置生成源码分组、包含路径和宏定义。配置或源码选择变更后需要重新生成 uVision 工程，生成的源码分组会被覆盖。
 
 ## 6. 示例使用
+
+各示例的接线、配置、命令和预期现象见侧栏中的对应工程文档。下表汇总运行前置条件和首次操作。
 
 | 工程 | 前置条件 | 操作或预期行为 |
 | --- | --- | --- |
