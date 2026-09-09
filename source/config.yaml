@@ -1,0 +1,87 @@
+project:
+  name: GD32H77D-Gino
+  title: GD32H77D Gino SDK
+  title_en: GD32H77D Gino SDK
+  description: GD32H77D Gino 开发板使用指南与示例工程文档。
+  description_en: Guides and examples for the GD32H77D Gino board.
+  version: '1.0.0'
+  author: CYFS
+  copyright: 2026, CYFS
+
+repository:
+  name: RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi
+  projects_dir: ..
+  docs_dir: .
+
+categories:
+  guides:
+    name: 开发指南
+    name_en: Developer Guides
+    patterns: [docs/project-guide, docs/architecture]
+  getting_started:
+    name: 快速开始
+    name_en: Getting Started
+    patterns: [projects/Gino_template]
+  drivers:
+    name: 外设驱动
+    name_en: Peripheral Drivers
+    patterns: [projects/Gino_driver_*]
+  display:
+    name: 显示与摄像头
+    name_en: Display and Camera
+    patterns: [projects/Gino_display_*]
+  components:
+    name: 组件示例
+    name_en: Components
+    patterns: [projects/Gino_component_*]
+  factory:
+    name: 出厂演示
+    name_en: Factory Demo
+    patterns: [projects/Gino_factory]
+
+generation:
+  # Select the template's shared bilingual HTML/PDF path for version builds.
+  mode: directory_tree
+  discovery:
+    mode: project_catalog
+    entry_files:
+      zh: README_zh.md
+      en: README.md
+    asset_globs: [figures/**, image/**]
+    unmatched_projects: error
+    duplicate_categories: error
+  navigation:
+    mode: categories
+    maxdepth: -1
+    titles_only: true
+    show_local_toc: true
+    order: [guides, getting_started, drivers, display, components, factory]
+  language_detection:
+    zh: README_zh.md
+    en: README.md
+  default_language: zh
+  # The template generates the site homepage from the configured categories.
+  default_page:
+    zh: index_zh.rst
+    en: index.rst
+  directory_index:
+    zh: README_zh.md
+    en: README.md
+  pdf_style: web
+  pdf_fonts:
+    latin: TeX Gyre Termes
+    cjk_body: FandolSong-Regular.otf
+    cjk_heading: FandolHei-Regular.otf
+    cjk_emphasis: FandolKai-Regular.otf
+    code: Source Code Pro
+
+sphinx:
+  theme: sphinx_rtd_theme
+  extensions: [myst_parser]
+  source_suffix:
+    .rst: restructuredtext
+    .md: markdown
+  myst_extensions: [colon_fence, deflist, dollarmath, html_image, html_admonition, strikethrough, tasklist]
+
+giscus:
+  enabled: false

@@ -2,6 +2,8 @@
 
 [English](README.md) | 中文
 
+[在线文档](https://rt-thread-studio.github.io/sdk-bsp-gd32h77d-realthread-ginopi/latest/index.html) | [本地预览](docs/config/README.md)
+
 ## 概览
 
 本仓库是 GD32H77D Gino 开发板的 RT-Thread Studio 板级支持包，基于 RT-Thread 5.3.0。SDK 共享 `rt-thread`、GD32 库和离线软件包，并提供 16 个独立工程，用于外设示例和应用演示。
@@ -27,11 +29,11 @@
 | Wi-Fi      | GD32VW553 AT 模块，UART4                         |
 | 下载       | SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 DAP-Link（CMSIS-DAP） |
 
-引脚、内存、前置条件和示例操作见 [工程使用指南](docs/PROJECT_GUIDE_zh.md)。
+引脚、内存、前置条件和示例操作见 [工程使用指南](docs/project-guide/README_zh.md)。
 
 ## 架构说明
 
-[架构与工作原理](docs/ARCHITECTURE_zh.md) 说明从复位到 RT-Thread 启动的链路、Kconfig/SCons 生成流程、RT-Thread 设备模型、Cortex-M7 Cache/DMA ownership，以及显示、摄像头、以太网、Wi-Fi、存储和 MQTT 的数据路径。
+[架构与工作原理](docs/architecture/README_zh.md) 说明从复位到 RT-Thread 启动的链路、Kconfig/SCons 生成流程、RT-Thread 设备模型、Cortex-M7 Cache/DMA ownership，以及显示、摄像头、以太网、Wi-Fi、存储和 MQTT 的数据路径。
 
 ## 工程列表
 
@@ -78,4 +80,4 @@
 2. 查看目录下是否有 `rt-thread` 和 `libraries` 的文件夹图标。
 3. 使用 [Env](https://club.rt-thread.org/ask/question/5699.html) 工具执行 scons --target=mdk5 更新 MDK5 工程文件。
 
-Env 使用 2.0 或更新版本，[下载链接](https://www.rt-thread.org/download.html#download-rt-thread-env-tool)。MDK 使用 Arm Compiler 6，并安装 GigaDevice `GD32H77x_78x_DFP` 0.6.1。完整步骤见 [工程使用指南](docs/PROJECT_GUIDE_zh.md)。
+Env 使用 2.0 或更新版本，[下载链接](https://www.rt-thread.org/download.html#download-rt-thread-env-tool)。MDK 使用 Arm Compiler 6，并安装 GigaDevice `GD32H77x_78x_DFP` 0.6.1。完整步骤见 [工程使用指南](docs/project-guide/README_zh.md)。

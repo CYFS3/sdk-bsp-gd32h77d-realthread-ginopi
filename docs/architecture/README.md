@@ -1,6 +1,6 @@
 # GD32H77D Gino BSP Architecture
 
-[中文](ARCHITECTURE_zh.md) | [Project guide](PROJECT_GUIDE.md) | [SDK overview](../README.md)
+[中文](README_zh.md) | [Project guide](../project-guide/README.md) | [SDK overview](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi#readme)
 
 This document describes source organization, startup, configuration, device interfaces, and peripheral data flow for application development.
 

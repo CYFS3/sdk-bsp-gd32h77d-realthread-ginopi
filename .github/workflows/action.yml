@@ -6,16 +6,20 @@ on:
     paths-ignore:
       - '**/*.md'
       - 'docs/**'
+      - 'source/**'
+      - '.github/versions.json'
       - '**/figures/**'
       - '.github/workflows/build-docs.yml'
-      - 'tools/build_docs.py'
+      - 'tools/check_docs.py'
   pull_request:
     paths-ignore:
       - '**/*.md'
       - 'docs/**'
+      - 'source/**'
+      - '.github/versions.json'
       - '**/figures/**'
       - '.github/workflows/build-docs.yml'
-      - 'tools/build_docs.py'
+      - 'tools/check_docs.py'
   workflow_dispatch:
   schedule:
     - cron: '0 16 1 * *'

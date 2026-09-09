@@ -25,6 +25,20 @@ _build/
 _static/_build/
 docs/_build/
 .doc-template/
+/source/source_build/
+/source/.doc_generator_manifest.json
+/source/index.rst
+/source/index_zh.rst
+/source/docs/
+/source/projects/
+/source/guides/
+/source/getting_started/
+/source/drivers/
+/source/display/
+/source/components/
+/source/factory/
+/source/_navigation/
+/source/_static/*.bak
 
 # IDE
 .vscode/

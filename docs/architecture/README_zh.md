@@ -1,6 +1,6 @@
 # GD32H77D Gino BSP 架构与工作原理
 
-[English](ARCHITECTURE.md) | [工程使用指南](PROJECT_GUIDE_zh.md) | [SDK 概览](../README_zh.md)
+[English](README.md) | [工程使用指南](../project-guide/README_zh.md) | [SDK 概览](https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi/blob/main/README_zh.md)
 
 本文面向应用开发，介绍源码组织、启动流程、配置构建、设备接口和外设数据路径。
 
