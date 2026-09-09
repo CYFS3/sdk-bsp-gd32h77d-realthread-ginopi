@@ -25,7 +25,7 @@ The projects cover the base template, UART, I2C, SPI, QSPI flash, SD card, CAN, 
 | Camera         | OV7670, QVGA RGB565, DCI + DMA                                    |
 | Ethernet       | ENET1 RMII, default PHY address 2                                 |
 | Wi-Fi          | GD32VW553 AT module on UART4                                      |
-| Download       | SWD; DAP-Link/PyOCD in Studio, J-Link in MDK |
+| Download       | SWD; DAP-Link/PyOCD in Studio, DAP-Link (CMSIS-DAP) in MDK |
 
 See the [project guide](docs/PROJECT_GUIDE.md) for pins, memory details, prerequisites, and example operation.
 

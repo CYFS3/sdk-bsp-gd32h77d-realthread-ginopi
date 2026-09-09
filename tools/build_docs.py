@@ -102,7 +102,7 @@ def build(template, output):
             shutil.copytree(template_source / name, source / name,
                             ignore=shutil.ignore_patterns("__pycache__"))
         shutil.copy2(template_source / "requirements.txt", source / "requirements.txt")
-        shutil.copy2(ROOT / "docs" / "site_config.yaml", source / "config.yaml")
+        shutil.copy2(ROOT / "docs" / "config" / "site_config.yaml", source / "config.yaml")
         with (source / "conf.py").open("a", encoding="utf-8") as config:
             config.write("\n" + (ROOT / "docs" / "sphinx_overrides.py").read_text(encoding="utf-8"))
         files = documentation_files()
