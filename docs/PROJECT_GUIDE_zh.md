@@ -10,8 +10,8 @@
 - RT-Thread：5.3.0。
 - RT-Thread Studio 工具链：GNU Arm Embedded 13.3。
 - Env：2.0 或更新版本，并配置 GNU Arm Embedded 工具链。
-- MDK：Keil MDK 5.43 或兼容版本、Arm Compiler 6、GigaDevice `GD32H77x_78x_DFP` 0.6.1 和 SEGGER J-Link。
-- 下载接口：SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 J-Link。
+- MDK：Keil MDK 5.43 或兼容版本、Arm Compiler 6、GigaDevice `GD32H77x_78x_DFP` 0.6.1 和 DAP-Link（CMSIS-DAP）。
+- 下载接口：SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 DAP-Link（CMSIS-DAP）。
 - 控制台：UART1，PA2/PA3，AF7，115200-8-N-1。
 - 工程数量：16 个，包括 `Gino_template` 和 15 个示例。
 
@@ -99,7 +99,7 @@ scons --pyconfig-silent
 scons --target=mdk5 --project-name=project
 ```
 
-将 `RTT_EXEC_PATH` 调整为实际 MDK 安装根目录。打开 `project.uvprojx`，构建与工程目录同名的 target。通过 J-Link/SWD 下载 `Objects/rt-thread.axf` 或 `Objects/rt-thread.hex`。工程使用 `board/linker_scripts/link.sct`，以及 `GD32H77x_78x_CNVM_2M.FLM` 和 `GD32H77x_78x_ECNVM_7M_512K.FLM` 两个 Flash 算法。
+将 `RTT_EXEC_PATH` 调整为实际 MDK 安装根目录。打开 `project.uvprojx`，构建与工程目录同名的 target。在 `Options for Target -> Debug` 中选择 `CMSIS-DAP Debugger`，在 `Settings` 中选择连接的 DAP-Link 和 SWD 接口，通过 DAP-Link 下载 `Objects/rt-thread.axf` 或 `Objects/rt-thread.hex`。工程使用 `board/linker_scripts/link.sct`，以及 `GD32H77x_78x_CNVM_2M.FLM` 和 `GD32H77x_78x_ECNVM_7M_512K.FLM` 两个 Flash 算法。
 
 `template.uvprojx` 和 `template.uvoptx` 保存 uVision 默认配置。SCons 根据当前配置生成源码分组、包含路径和宏定义。配置或源码选择变更后需要重新生成 uVision 工程，生成的源码分组会被覆盖。
 

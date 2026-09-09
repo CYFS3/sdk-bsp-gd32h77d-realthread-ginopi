@@ -1,3 +1,4 @@
+# Studio scans the first two ZIP path levels for the BSP YAML.
 project:
   name: GD32H77D-Gino
   title: GD32H77D Gino SDK

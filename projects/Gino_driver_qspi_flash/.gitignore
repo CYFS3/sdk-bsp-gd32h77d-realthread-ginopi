@@ -17,6 +17,7 @@
 *.uvguix*
 *.scvd
 *.ini
+!/.settings/projcfg.ini
 .sconsign.dblite
 .vscode/
 build/

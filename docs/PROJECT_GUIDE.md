@@ -10,8 +10,8 @@ This guide covers hardware connections, memory layout, project creation, builds,
 - RT-Thread: 5.3.0.
 - RT-Thread Studio toolchain: GNU Arm Embedded 13.3.
 - Env: version 2.0 or later, with a configured GNU Arm Embedded toolchain.
-- MDK: Keil MDK 5.43 or compatible, Arm Compiler 6, GigaDevice `GD32H77x_78x_DFP` 0.6.1, and SEGGER J-Link.
-- Download connection: SWD with DAP-Link/PyOCD in Studio, or J-Link in MDK.
+- MDK: Keil MDK 5.43 or compatible, Arm Compiler 6, GigaDevice `GD32H77x_78x_DFP` 0.6.1, and DAP-Link (CMSIS-DAP).
+- Download connection: SWD with DAP-Link/PyOCD in Studio, or DAP-Link (CMSIS-DAP) in MDK.
 - Console: UART1, PA2/PA3, AF7, 115200-8-N-1.
 - Projects: 16, including `Gino_template` and 15 examples.
 
@@ -99,7 +99,7 @@ scons --pyconfig-silent
 scons --target=mdk5 --project-name=project
 ```
 
-Adjust `RTT_EXEC_PATH` to the MDK installation root. Open `project.uvprojx` and build the target matching the project directory. Download `Objects/rt-thread.axf` or `Objects/rt-thread.hex` with J-Link/SWD. The project uses `board/linker_scripts/link.sct` and the `GD32H77x_78x_CNVM_2M.FLM` and `GD32H77x_78x_ECNVM_7M_512K.FLM` flash algorithms.
+Adjust `RTT_EXEC_PATH` to the MDK installation root. Open `project.uvprojx` and build the target matching the project directory. Select `CMSIS-DAP Debugger` under `Options for Target -> Debug`, then select the connected DAP-Link and the SWD interface in `Settings`. Download `Objects/rt-thread.axf` or `Objects/rt-thread.hex` through DAP-Link. The project uses `board/linker_scripts/link.sct` and the `GD32H77x_78x_CNVM_2M.FLM` and `GD32H77x_78x_ECNVM_7M_512K.FLM` flash algorithms.
 
 `template.uvprojx` and `template.uvoptx` hold the uVision defaults. SCons generates source groups, include paths, and defines from the current configuration. Regenerate the uVision project after changing configuration or source selection; generated source groups are overwritten.
 
