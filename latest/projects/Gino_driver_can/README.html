@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino_driver_can &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static_en/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static_en/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static_en/documentation_options.js?v=a12e3537"></script>
+      <script src="../../_static_en/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static_en/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static_en/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static_en/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static_en/version_info.js?v=193afac8"></script>
+      <script src="../../_static_en/language_switch.js?v=d198989a"></script>
+      <script src="../../_static_en/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static_en/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static_en/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex_en.html" />
+    <link rel="search" title="Search" href="../../search_en.html" />
+    <link rel="next" title="Gino_driver_eth" href="../Gino_driver_eth/README.html" />
+    <link rel="prev" title="Peripheral Drivers" href="../../_navigation/drivers.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "en", "enabled": true, "target_docname": "projects/Gino_driver_can/README_zh", "target_language": "zh", "target_url": "README_zh.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README_zh.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_en.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search_en.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/guides.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/project-guide/README.html">GD32H77D Gino SDK User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_template/README.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/drivers.html">Peripheral Drivers</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_eth/README.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_i2c/README.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_pwm/README.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_rtc/README.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdcard/README.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdram/README.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_spi/README.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_device/README.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_host/README.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/display.html">Display and Camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_camera/README.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_lvgl/README.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_component_mqtt/README.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/factory.html">Factory Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_factory/README.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_en.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_en.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/drivers.html">Peripheral Drivers</a></li>
+      <li class="breadcrumb-item active">Gino_driver_can</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gino-driver-can">
+<h1>Gino_driver_can<a class="headerlink" href="#gino-driver-can" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This project demonstrates external CAN1 communication on the GD32H77D Gino board. Startup initializes the device and reception without transmitting. Each <code class="docutils literal notranslate"><span class="pre">gino_can_send</span></code> command sends one classic CAN frame, followed by one CAN FD frame when enabled. The command can be called repeatedly. Received frames are printed to the UART console using colored ulog output.</p>
+<p>Primary device: <code class="docutils literal notranslate"><span class="pre">can1</span></code>.</p>
+<p>All examples keep <code class="docutils literal notranslate"><span class="pre">uart1</span></code> as the FinSH/MSH console at 115200-8-N-1, and PC4 LED is used as the run indicator.</p>
+<p>Current project provides the following MSH commands:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Example/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gino_can_send</span></code></p></td>
+<td><p>Send one classic CAN frame, then one CAN FD frame when enabled.</p></td>
+<td><p>Sends one set per invocation; repeat the command to send again.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code></p></td>
+<td><p>Check whether the primary device used by this example is registered.</p></td>
+<td><p>Checks <code class="docutils literal notranslate"><span class="pre">can1</span></code> by default.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code></p></td>
+<td><p>List registered system devices.</p></td>
+<td><p>Confirm that UART, PIN, buses, and target devices exist.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="can-arbitration-and-error-handling-details">
+<h2>2. CAN Arbitration and Error Handling Details<a class="headerlink" href="#can-arbitration-and-error-handling-details" title="Link to this heading"></a></h2>
+<p>CAN1 handles bit timing, ID arbitration, ACK, error counters, and retransmission. PB4/PB5 still require an external transceiver for CANH/CANL. Lower numeric IDs normally win arbitration, while the application defines the payload protocol.</p>
+<p>The complete data path is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>application CAN frame -&gt; RT-Thread can1 -&gt; CAN1 -&gt; PB4/PB5 -&gt; transceiver -&gt; CANH/CANL
+</pre></div>
+</div>
+<p>The protocol layer only defines communication and data processing rules. Final validation still depends on controller clocks, pin multiplexing, interrupt/DMA handling, and upper-layer state machines. Device discovery, bus registration, or a successful build cannot replace a complete data transfer test.</p>
+</section>
+<section id="gd32h77d-can1-features">
+<h2>3. GD32H77D CAN1 Features<a class="headerlink" href="#gd32h77d-can1-features" title="Link to this heading"></a></h2>
+<p>The project enables GD32H77D CAN1 on PB4/PB5. The controller provides bit timing, filters, TX mailboxes, RX FIFOs, error counters, and retransmission; an external transceiver supplies the differential physical layer.</p>
+</section>
+<section id="rt-thread-can-device-interface">
+<h2>4. RT-Thread CAN Device Interface<a class="headerlink" href="#rt-thread-can-device-interface" title="Link to this heading"></a></h2>
+<p>RT-Thread registers CAN1 as <code class="docutils literal notranslate"><span class="pre">can1</span></code>. Applications use <code class="docutils literal notranslate"><span class="pre">rt_device_open</span></code> to configure interrupt-driven TX/RX, <code class="docutils literal notranslate"><span class="pre">rt_device_control</span></code> to set bitrate and mode, and <code class="docutils literal notranslate"><span class="pre">rt_device_read</span></code>/<code class="docutils literal notranslate"><span class="pre">rt_device_write</span></code> to exchange <code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">rt_can_msg</span></code> objects.</p>
+<p>Primary device: <code class="docutils literal notranslate"><span class="pre">can1</span></code>. The application opens it in normal mode. The MSH command sends frames in order; the RX callback wakes a receive thread that drains the queue and prints each frame.</p>
+</section>
+<section id="hardware">
+<h2>5. Hardware<a class="headerlink" href="#hardware" title="Link to this heading"></a></h2>
+<p>CAN1 uses PB4/AF4 for TX and PB5/AF9 for RX. Connect the external transceiver to the peer’s CANH/CANL and reference ground, with 120-ohm termination at each end of the bus. With CAN FD enabled, both the transceiver and peer must support ISO CAN FD at a 2 Mbit/s data rate.</p>
+<p>Default console: UART1, PA2/PA3, AF7, 115200-8-N-1.</p>
+<p>A CAN transceiver and proper termination are mandatory; MCU pins cannot connect directly to CANH/CANL.</p>
+</section>
+<section id="example">
+<h2>6. Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>Reception starts after reset without transmitting. Run the following MSH command to send one set of frames:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>msh /&gt; gino_can_send
+</pre></div>
+</div>
+<p>The command returns after sending once and can be invoked again. Reception remains active.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/main.c</span></code>: CAN initialization, ordered classic CAN/CAN FD transmission, and RX printing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/device_probe.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/gd32_drivers/drv_can.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/gd32_drivers/config/can_config.h</span></code></p></li>
+</ul>
+<section id="send-command">
+<h3>6.1 Send Command<a class="headerlink" href="#send-command" title="Link to this heading"></a></h3>
+<p>The arbitration bitrate is <strong>500 kbit/s</strong>. With <code class="docutils literal notranslate"><span class="pre">RT_CAN_USING_CANFD</span></code> defined, the application enables ISO CAN FD at <strong>2 Mbit/s</strong> for the data phase while also supporting classic frames.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Order</p></th>
+<th class="head"><p>Format</p></th>
+<th class="head"><p>Standard ID</p></th>
+<th class="head"><p>Length</p></th>
+<th class="head"><p>BRS</p></th>
+<th class="head"><p>Payload</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Classic CAN data frame</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x123</span></code></p></td>
+<td><p>8 bytes</p></td>
+<td><p>0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">00</span> <span class="pre">01</span> <span class="pre">02</span> <span class="pre">03</span> <span class="pre">04</span> <span class="pre">05</span> <span class="pre">06</span> <span class="pre">07</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>CAN FD data frame, only when enabled</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x124</span></code></p></td>
+<td><p>64 bytes</p></td>
+<td><p>1</p></td>
+<td><p>Incrementing bytes from <code class="docutils literal notranslate"><span class="pre">00</span></code> through <code class="docutils literal notranslate"><span class="pre">3F</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Each <code class="docutils literal notranslate"><span class="pre">gino_can_send</span></code> invocation sends one classic frame, waits 100 ms when CAN FD is enabled, then sends one FD frame and returns. Without CAN FD, only the classic frame is sent. Successful writes produce green <code class="docutils literal notranslate"><span class="pre">[TX]</span></code> logs through <code class="docutils literal notranslate"><span class="pre">LOG_I</span></code>; failed or timed-out writes produce red <code class="docutils literal notranslate"><span class="pre">[TX</span> <span class="pre">FAIL]</span></code> logs through <code class="docutils literal notranslate"><span class="pre">LOG_E</span></code>. The application does not automatically retry the command.</p>
+</section>
+<section id="receive-output">
+<h3>6.2 Receive Output<a class="headerlink" href="#receive-output" title="Link to this heading"></a></h3>
+<p>The receive thread prints each external frame as one green <code class="docutils literal notranslate"><span class="pre">[RX]</span></code> line through <code class="docutils literal notranslate"><span class="pre">LOG_I</span></code>, including CAN/CANFD format, standard/extended ID, RTR, BRS, byte count, and the complete hexadecimal payload. The interrupt callback only signals the thread.</p>
+<p>The project enables <code class="docutils literal notranslate"><span class="pre">RT_USING_ULOG</span></code>, <code class="docutils literal notranslate"><span class="pre">ULOG_BACKEND_USING_CONSOLE</span></code>, and <code class="docutils literal notranslate"><span class="pre">ULOG_USING_COLOR</span></code>. Logs include tick time, level, and the <code class="docutils literal notranslate"><span class="pre">can.demo</span></code> tag. <code class="docutils literal notranslate"><span class="pre">ULOG_LINE_BUF_SIZE=512</span></code> accommodates a complete 64-byte FD payload. Use a serial terminal with ANSI color support.</p>
+<p>The board runs in normal mode and does not receive its own transmissions. Configure the peer to echo the frames, or manually send the same IDs and payloads, to see corresponding TX and RX lines. ACK alone does not produce an application RX frame. Incoming frames are printed without being automatically retransmitted.</p>
+<p>Example log bodies when running the command with peer echo enabled, with ulog time, level, and tag prefixes omitted. TX/RX log ordering depends on the peer’s response timing:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>can1 normal mode: arbitration=500000 bit/s, ISO CAN FD data=2000000 bit/s
+[TX] can1 CAN STD ID=0x00000123 RTR=0 BRS=0 LEN=8 DATA=00 01 02 03 04 05 06 07
+[RX] can1 CAN STD ID=0x00000123 RTR=0 BRS=0 LEN=8 DATA=00 01 02 03 04 05 06 07
+[TX] can1 CANFD STD ID=0x00000124 RTR=0 BRS=1 LEN=64 DATA=00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F
+[RX] can1 CANFD STD ID=0x00000124 RTR=0 BRS=1 LEN=64 DATA=00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F
+</pre></div>
+</div>
+</section>
+<section id="can-fd-configuration">
+<h3>6.3 CAN FD Configuration<a class="headerlink" href="#can-fd-configuration" title="Link to this heading"></a></h3>
+<p>This project enables <code class="docutils literal notranslate"><span class="pre">RT_CAN_USING_CANFD</span></code> and has a 1152-byte non-blocking TX buffer for 16 <code class="docutils literal notranslate"><span class="pre">rt_can_msg</span></code> objects; the example uses blocking writes to preserve transmission order. Other projects can enable <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">CAN-FD</span> <span class="pre">support</span></code> under <code class="docutils literal notranslate"><span class="pre">RT-Thread</span> <span class="pre">Components</span> <span class="pre">-&gt;</span> <span class="pre">Device</span> <span class="pre">Drivers</span> <span class="pre">-&gt;</span> <span class="pre">Using</span> <span class="pre">CAN</span> <span class="pre">device</span> <span class="pre">drivers</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">can_demo_init()</span></code> configures <code class="docutils literal notranslate"><span class="pre">enable_canfd</span></code> according to the build option before opening the device for interrupt-driven TX/RX in normal mode. Classic frames use <code class="docutils literal notranslate"><span class="pre">fd_frame=0</span></code>; subsequent FD frames use <code class="docutils literal notranslate"><span class="pre">fd_frame=1</span></code> and <code class="docutils literal notranslate"><span class="pre">brs=1</span></code>. The controller does not need to be reinitialized between the two frame types.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">message.len</span></code> is a byte count: use <code class="docutils literal notranslate"><span class="pre">64</span></code> for 64 bytes, not the DLC encoding <code class="docutils literal notranslate"><span class="pre">15</span></code>. Legal lengths are 0 through 8, 12, 16, 20, 24, 32, 48, and 64. Other lengths from 9 through 63 are zero-padded to the next legal length, which is reported on reception.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fd_frame=0</span></code> sends a classic CAN frame of up to 8 bytes. <code class="docutils literal notranslate"><span class="pre">fd_frame=1,</span> <span class="pre">brs=0</span></code> sends an FD frame without bitrate switching; <code class="docutils literal notranslate"><span class="pre">fd_frame=1,</span> <span class="pre">brs=1</span></code> enables data-phase bitrate switching. CAN FD does not support remote frames.</p></li>
+<li><p>Reception still uses <code class="docutils literal notranslate"><span class="pre">rt_device_read</span></code>; <code class="docutils literal notranslate"><span class="pre">fd_frame</span></code>, <code class="docutils literal notranslate"><span class="pre">brs</span></code>, and <code class="docutils literal notranslate"><span class="pre">len</span></code> describe the actual frame. Set <code class="docutils literal notranslate"><span class="pre">hdr_index=-1</span></code> before reading the general RX queue when hardware filtering is enabled.</p></li>
+<li><p>The maximum data rate is 8 Mbit/s. The driver calculates timing from the actual APB2 clock with a shared arbitration/data prescaler and a sample point near 80%. At the default 300 MHz APB2 clock, 500 kbit/s arbitration supports 2, 4, and 5 Mbit/s data rates. An exact 8 Mbit/s is unavailable at this clock and returns <code class="docutils literal notranslate"><span class="pre">-RT_EINVAL</span></code>. Custom bit timing currently returns <code class="docutils literal notranslate"><span class="pre">-RT_ENOSYS</span></code>.</p></li>
+<li><p>A 64-byte CAN FD mailbox occupies 72 bytes, so the 512-byte message RAM holds at most seven mailboxes. With CAN FD compiled in, mailboxes 0-2 receive and 3-6 transmit. <code class="docutils literal notranslate"><span class="pre">RT_CANSND_BOX_NUM</span></code> accepts 1-3, leaving at least one TX mailbox for non-blocking sends. Without CAN FD compiled in, the original 16 RX / 16 TX layout is retained.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RT_CAN_CMD_SET_CANFD</span></code> with <code class="docutils literal notranslate"><span class="pre">(void</span> <span class="pre">*)0U</span></code> restores classic CAN mode. Stop transmitting and drain the TX queues before changing configuration; active hardware TX returns <code class="docutils literal notranslate"><span class="pre">-RT_EBUSY</span></code>.</p></li>
+</ul>
+</section>
+<section id="validation">
+<h3>6.4 Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Connect the transceiver, CANH/CANL, reference ground, and termination. Open UART1 at 115200-8-N-1.</p></li>
+<li><p>Set the external peer to normal mode at 500 kbit/s arbitration. With CAN FD enabled, also configure ISO CAN FD with a 2 Mbit/s data rate.</p></li>
+<li><p>Reset the board; no frames are sent yet. Run <code class="docutils literal notranslate"><span class="pre">gino_can_send</span></code> and confirm that the peer receives classic ID <code class="docutils literal notranslate"><span class="pre">0x123</span></code>, followed by FD ID <code class="docutils literal notranslate"><span class="pre">0x124</span></code> when enabled. Run the command again to send another set.</p></li>
+<li><p>Send frames from the peer or enable peer echo, and check the complete <code class="docutils literal notranslate"><span class="pre">[RX]</span></code> data in the board’s console. Other incoming IDs are also accepted.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">list_device</span></code> or <code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code> to inspect registration. For <code class="docutils literal notranslate"><span class="pre">[TX</span> <span class="pre">FAIL]</span></code>, check the peer’s ACK, bitrates, wiring, and termination.</p></li>
+</ol>
+</section>
+</section>
+<section id="runtime-results">
+<h2>7. Runtime Results<a class="headerlink" href="#runtime-results" title="Link to this heading"></a></h2>
+<section id="expected-behavior">
+<h3>7.1 Expected Behavior<a class="headerlink" href="#expected-behavior" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code> and <code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code> find <code class="docutils literal notranslate"><span class="pre">can1</span></code>.</p></li>
+<li><p>Startup sends no frames. Each <code class="docutils literal notranslate"><span class="pre">gino_can_send</span></code> invocation sends classic CAN ID <code class="docutils literal notranslate"><span class="pre">0x123</span></code>, then CAN FD ID <code class="docutils literal notranslate"><span class="pre">0x124</span></code> when enabled.</p></li>
+<li><p>Frames sent or echoed by the peer appear as <code class="docutils literal notranslate"><span class="pre">[RX]</span></code> lines with their complete payloads.</p></li>
+<li><p>CANH/CANL show valid recessive levels while idle.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../_navigation/drivers.html" class="btn btn-neutral float-left" title="Peripheral Drivers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Gino_driver_eth/README.html" class="btn btn-neutral float-right" title="Gino_driver_eth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CYFS.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">Table of Contents</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">Gino_driver_can</a><ul>
+<li><a class="reference internal" href="#introduction">1. Introduction</a></li>
+<li><a class="reference internal" href="#can-arbitration-and-error-handling-details">2. CAN Arbitration and Error Handling Details</a></li>
+<li><a class="reference internal" href="#gd32h77d-can1-features">3. GD32H77D CAN1 Features</a></li>
+<li><a class="reference internal" href="#rt-thread-can-device-interface">4. RT-Thread CAN Device Interface</a></li>
+<li><a class="reference internal" href="#hardware">5. Hardware</a></li>
+<li><a class="reference internal" href="#example">6. Example</a><ul>
+<li><a class="reference internal" href="#send-command">6.1 Send Command</a></li>
+<li><a class="reference internal" href="#receive-output">6.2 Receive Output</a></li>
+<li><a class="reference internal" href="#can-fd-configuration">6.3 CAN FD Configuration</a></li>
+<li><a class="reference internal" href="#validation">6.4 Validation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#runtime-results">7. Runtime Results</a><ul>
+<li><a class="reference internal" href="#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> Version:1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        Built:<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

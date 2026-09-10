@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GD32H77D Gino SDK User Guide &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static_en/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static_en/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static_en/documentation_options.js?v=a12e3537"></script>
+      <script src="../../_static_en/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static_en/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static_en/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static_en/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static_en/version_info.js?v=193afac8"></script>
+      <script src="../../_static_en/language_switch.js?v=d198989a"></script>
+      <script src="../../_static_en/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static_en/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static_en/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex_en.html" />
+    <link rel="search" title="Search" href="../../search_en.html" />
+    <link rel="next" title="Getting Started" href="../../_navigation/getting_started.html" />
+    <link rel="prev" title="Developer Guides" href="../../_navigation/guides.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "en", "enabled": true, "target_docname": "docs/project-guide/README_zh", "target_language": "zh", "target_url": "README_zh.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README_zh.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_en.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search_en.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/guides.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GD32H77D Gino SDK User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_template/README.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/drivers.html">Peripheral Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_can/README.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_eth/README.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_i2c/README.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_pwm/README.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_rtc/README.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_sdcard/README.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_sdram/README.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_spi/README.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_usb_device/README.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_usb_host/README.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/display.html">Display and Camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_display_camera/README.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_display_lvgl/README.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_component_mqtt/README.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/factory.html">Factory Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_factory/README.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_en.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_en.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/guides.html">Developer Guides</a></li>
+      <li class="breadcrumb-item active">GD32H77D Gino SDK User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gd32h77d-gino-sdk-user-guide">
+<h1>GD32H77D Gino SDK User Guide<a class="headerlink" href="#gd32h77d-gino-sdk-user-guide" title="Link to this heading"></a></h1>
+<p><a href="README_zh.html">中文</a> | <a class="reference external" href="https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi#readme">SDK overview</a></p>
+<p>This guide covers the SDK directory layout, project selection, hardware connections, project creation, builds, downloads, and example operation.</p>
+<section id="platform-and-tools">
+<h2>1. Platform and Tools<a class="headerlink" href="#platform-and-tools" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Board: GD32H77D Gino; MCU: GD32H77DIW, Arm Cortex-M7, up to 600 MHz.</p></li>
+<li><p>RT-Thread: 5.3.0.</p></li>
+<li><p>RT-Thread Studio toolchain: GNU Arm Embedded 13.3.</p></li>
+<li><p>Env: version 2.0 or later, with a configured GNU Arm Embedded toolchain.</p></li>
+<li><p>MDK: Keil MDK 5.43 or compatible, Arm Compiler 6, GigaDevice <code class="docutils literal notranslate"><span class="pre">GD32H77x_78x_DFP</span></code> 0.6.1, and DAP-Link (CMSIS-DAP).</p></li>
+<li><p>Download connection: SWD with DAP-Link/PyOCD in Studio, or DAP-Link (CMSIS-DAP) in MDK.</p></li>
+<li><p>Console: UART1, PA2/PA3, AF7, 115200-8-N-1.</p></li>
+<li><p>Projects: 16, including <code class="docutils literal notranslate"><span class="pre">Gino_template</span></code> and 15 examples.</p></li>
+</ul>
+<section id="sdk-directory-layout">
+<h3>SDK Directory Layout<a class="headerlink" href="#sdk-directory-layout" title="Link to this heading"></a></h3>
+<p>The examples share the RT-Thread kernel, GD32 libraries, board drivers, and offline packages. Paths below are relative to the SDK root.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Directory</p></th>
+<th class="head"><p>Contents</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">projects/&lt;name&gt;/applications</span></code></p></td>
+<td><p>Application entry point and example code</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">projects/&lt;name&gt;/board</span></code></p></td>
+<td><p>Project board configuration and linker scripts</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">libraries/Board_Drivers</span></code></p></td>
+<td><p>Shared board initialization and onboard peripheral drivers</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">libraries/gd32_drivers</span></code></p></td>
+<td><p>GD32 peripheral drivers for RT-Thread</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">libraries/gd32-arm-*</span></code></p></td>
+<td><p>GD32 CMSIS, startup code, and peripheral libraries</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rt-thread</span></code></p></td>
+<td><p>RT-Thread kernel, components, and build tools</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">packages</span></code></p></td>
+<td><p>Offline packages used by the examples</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each project has its own <code class="docutils literal notranslate"><span class="pre">.config</span></code>, <code class="docutils literal notranslate"><span class="pre">rtconfig.h</span></code>, Studio metadata, and MDK project files. Configure features in the selected project; changes to shared drivers affect all projects that use them.</p>
+<p>For a first build or a new application, start with <a class="reference internal" href="../../projects/Gino_template/README.html"><span class="std std-doc">Gino_template</span></a>. To test a peripheral, select its independent example from section 6. Use <a class="reference internal" href="../../projects/Gino_factory/README.html"><span class="std std-doc">Gino_factory</span></a> for the integrated board demonstration.</p>
+</section>
+</section>
+<section id="hardware-map">
+<h2>2. Hardware Map<a class="headerlink" href="#hardware-map" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Peripheral</p></th>
+<th class="head"><p>Pins or resource</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Run LED</p></td>
+<td><p>PC4</p></td>
+<td><p>toggled every 500 ms</p></td>
+</tr>
+<tr class="row-odd"><td><p>UART1</p></td>
+<td><p>PA2/PA3, AF7</p></td>
+<td><p>console</p></td>
+</tr>
+<tr class="row-even"><td><p>UART4</p></td>
+<td><p>PB12/PB13, AF14</p></td>
+<td><p>GD32VW553 AT module</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C1</p></td>
+<td><p>PH4/PB11, AF4</p></td>
+<td><p>independent I2C example</p></td>
+</tr>
+<tr class="row-even"><td><p>I2C2</p></td>
+<td><p>PA8/PC9, AF4</p></td>
+<td><p>OV7670 control</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C3</p></td>
+<td><p>PD12/PD13, AF4</p></td>
+<td><p>GT911 touch</p></td>
+</tr>
+<tr class="row-even"><td><p>SPI3</p></td>
+<td><p>PE12/PF0/PF1</p></td>
+<td><p>SCK/MISO/MOSI</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAN1</p></td>
+<td><p>PB4/PB5</p></td>
+<td><p>external CAN transceiver and termination required</p></td>
+</tr>
+<tr class="row-even"><td><p>LCD backlight</p></td>
+<td><p>TIMER1 CH0, PA0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwm1</span></code> channel 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>PWM outputs</p></td>
+<td><p>PA7 and PG7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwm2</span></code> channel 2 and <code class="docutils literal notranslate"><span class="pre">pwm30</span></code> channel 3</p></td>
+</tr>
+<tr class="row-even"><td><p>GT911</p></td>
+<td><p>reset PH3, interrupt PH5</p></td>
+<td><p>address <code class="docutils literal notranslate"><span class="pre">0x5D</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>OV7670</p></td>
+<td><p>XCLK PE9, I2C2, DCI + DMA1 channel 7</p></td>
+<td><p>QVGA RGB565</p></td>
+</tr>
+<tr class="row-even"><td><p>QSPI flash</p></td>
+<td><p>CS PC11, CLK PF10, D0-D3 PF8/PF9/PF7/PA1</p></td>
+<td><p>8 MiB GD25Q64E on OSPI0</p></td>
+</tr>
+<tr class="row-odd"><td><p>USB device</p></td>
+<td><p>USBHS0, PA11/PA12</p></td>
+<td><p>Type-C</p></td>
+</tr>
+<tr class="row-even"><td><p>USB host</p></td>
+<td><p>USBHS1, PB14/PB15, VBUS PF2</p></td>
+<td><p>USB-A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ethernet</p></td>
+<td><p>ENET1 RMII</p></td>
+<td><p>PHY address 2, 50 MHz REF_CLK on PC12</p></td>
+</tr>
+<tr class="row-even"><td><p>SDRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0xC0000000</span></code>, 32 MiB</p></td>
+<td><p>display buffers and extended heap</p></td>
+</tr>
+</tbody>
+</table>
+<p>Follow the corresponding project README for external module power, common ground, and interface voltage requirements.</p>
+</section>
+<section id="memory-and-download-layout">
+<h2>3. Memory and Download Layout<a class="headerlink" href="#memory-and-download-layout" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Region</p></th>
+<th class="head"><p>Address</p></th>
+<th class="head"><p>Size</p></th>
+<th class="head"><p>Use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CNVM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x08010000</span></code></p></td>
+<td><p>1984 KiB</p></td>
+<td><p>application vector table, startup, and primary code</p></td>
+</tr>
+<tr class="row-odd"><td><p>ECNVM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x08200000</span></code></p></td>
+<td><p>7680 KiB</p></td>
+<td><p>extended program flash, as allocated by the linker script</p></td>
+</tr>
+<tr class="row-even"><td><p>ITCMRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x00000000</span></code></p></td>
+<td><p>128 KiB</p></td>
+<td><p>allocated by the linker script</p></td>
+</tr>
+<tr class="row-odd"><td><p>DTCMRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x20000000</span></code></p></td>
+<td><p>256 KiB</p></td>
+<td><p>allocated by the linker script</p></td>
+</tr>
+<tr class="row-even"><td><p>AXISRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x24000000</span></code></p></td>
+<td><p>768 KiB</p></td>
+<td><p>data, BSS, stack, internal heap, and camera buffers</p></td>
+</tr>
+<tr class="row-odd"><td><p>SRAM1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x30004000</span></code></p></td>
+<td><p>16 KiB</p></td>
+<td><p>Ethernet DMA descriptors and buffers</p></td>
+</tr>
+<tr class="row-even"><td><p>SDRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0xC0000000</span></code></p></td>
+<td><p>32 MiB</p></td>
+<td><p>display buffers and extended heap</p></td>
+</tr>
+</tbody>
+</table>
+<p>The application vector table uses <code class="docutils literal notranslate"><span class="pre">0x08010000</span></code>; a boot entry at <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code> provides compatibility with different chip revisions. The default BIN image includes this boot entry and places the application vector table at offset <code class="docutils literal notranslate"><span class="pre">0x10000</span></code>. Download the complete BIN image at <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code>.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">BSP_USING_LCD_MIPI</span></code> enabled, the first 3 MiB of SDRAM are reserved and the extended heap starts at <code class="docutils literal notranslate"><span class="pre">0xC0300000</span></code>. Without LCD, the SDRAM heap starts at <code class="docutils literal notranslate"><span class="pre">0xC0000000</span></code>. Camera capture and preview buffers use internal AXI SRAM, separately from the SDRAM display area.</p>
+</section>
+<section id="rt-thread-studio">
+<h2>4. RT-Thread Studio<a class="headerlink" href="#rt-thread-studio" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Install the GD32H77D-Gino BSP <strong>v1.0.0</strong> described by <code class="docutils literal notranslate"><span class="pre">sdk-bsp-gd32h77d-gino.yaml</span></code>.</p></li>
+<li><p>Create an RT-Thread project based on the <code class="docutils literal notranslate"><span class="pre">GD32H77D-Gino</span></code> board.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Gino_template</span></code> or one of the 15 examples.</p></li>
+<li><p>Configure peripherals and packages in RT-Thread Settings, then build with GNU Arm Embedded 13.3.</p></li>
+<li><p>Connect UART1 at 115200-8-N-1 and the SWD download adapter.</p></li>
+<li><p>Select DAP-Link, target <code class="docutils literal notranslate"><span class="pre">GD32H77DIW</span></code>, and BIN mode; set the download start address to <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code> and download <code class="docutils literal notranslate"><span class="pre">Debug/rtthread.bin</span></code>. These are the SDK’s default download settings. Builds retain <code class="docutils literal notranslate"><span class="pre">Debug/rtthread.elf</span></code> for debugging.</p></li>
+<li><p>Reset the board and run the selected example as described below.</p></li>
+</ol>
+<p>Studio-created projects contain the shared source trees required by the selected example.</p>
+</section>
+<section id="env-and-mdk">
+<h2>5. Env and MDK<a class="headerlink" href="#env-and-mdk" title="Link to this heading"></a></h2>
+<section id="env-with-gcc">
+<h3>5.1 Env with GCC<a class="headerlink" href="#env-with-gcc" title="Link to this heading"></a></h3>
+<p>In an Env PowerShell session, enter the chosen project from the SDK root. For example:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd </span><span class="n">projects</span><span class="p">\</span><span class="n">Gino_template</span>
+<span class="p">.\</span><span class="n">mklinks</span><span class="p">.</span><span class="n">bat</span>
+<span class="nv">$env:RTT_CC</span> <span class="p">=</span> <span class="s2">"gcc"</span>
+<span class="nv">$env:RTT_EXEC_PATH</span> <span class="p">=</span> <span class="s2">"&lt;gnu-arm-toolchain&gt;\bin"</span>
+<span class="n">scons</span> <span class="p">-</span><span class="n">-pyconfig-silent</span>
+<span class="n">scons</span> <span class="n">-j8</span>
+</pre></div>
+</div>
+<p>Replace the toolchain path with the directory containing <code class="docutils literal notranslate"><span class="pre">arm-none-eabi-gcc</span></code>. <code class="docutils literal notranslate"><span class="pre">mklinks.bat</span></code> creates links to the shared <code class="docutils literal notranslate"><span class="pre">rt-thread</span></code> and <code class="docutils literal notranslate"><span class="pre">libraries</span></code> directories. SCons produces <code class="docutils literal notranslate"><span class="pre">rt-thread.elf</span></code>, <code class="docutils literal notranslate"><span class="pre">rtthread.hex</span></code>, and <code class="docutils literal notranslate"><span class="pre">rtthread.bin</span></code>; download <code class="docutils literal notranslate"><span class="pre">rtthread.bin</span></code> at <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code>.</p>
+<p>After changing features with <code class="docutils literal notranslate"><span class="pre">menuconfig</span></code>, regenerate <code class="docutils literal notranslate"><span class="pre">rtconfig.h</span></code> using <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--pyconfig-silent</span></code>. Run <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--target=eclipse</span></code> when Eclipse project metadata needs regeneration.</p>
+</section>
+<section id="mdk5-with-arm-compiler-6">
+<h3>5.2 MDK5 with Arm Compiler 6<a class="headerlink" href="#mdk5-with-arm-compiler-6" title="Link to this heading"></a></h3>
+<p>Install the MDK dependencies listed in section 1. In an Env PowerShell session, enter the chosen project from the SDK root:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd </span><span class="n">projects</span><span class="p">\</span><span class="n">Gino_template</span>
+<span class="p">.\</span><span class="n">mklinks</span><span class="p">.</span><span class="n">bat</span>
+<span class="nv">$env:RTT_CC</span> <span class="p">=</span> <span class="s2">"keil"</span>
+<span class="nv">$env:RTT_EXEC_PATH</span> <span class="p">=</span> <span class="s2">"C:\Keil_v5"</span>
+<span class="n">scons</span> <span class="p">-</span><span class="n">-pyconfig-silent</span>
+<span class="n">scons</span> <span class="p">-</span><span class="n">-target</span><span class="p">=</span><span class="n">mdk5</span> <span class="p">-</span><span class="n">-project-name</span><span class="p">=</span><span class="n">project</span>
+</pre></div>
+</div>
+<p>Adjust <code class="docutils literal notranslate"><span class="pre">RTT_EXEC_PATH</span></code> to the MDK installation root. Open <code class="docutils literal notranslate"><span class="pre">project.uvprojx</span></code> and build the target matching the project directory. Select <code class="docutils literal notranslate"><span class="pre">CMSIS-DAP</span> <span class="pre">Debugger</span></code> under <code class="docutils literal notranslate"><span class="pre">Options</span> <span class="pre">for</span> <span class="pre">Target</span> <span class="pre">-&gt;</span> <span class="pre">Debug</span></code>, then select the connected DAP-Link and the SWD interface in <code class="docutils literal notranslate"><span class="pre">Settings</span></code>. Download <code class="docutils literal notranslate"><span class="pre">Objects/rt-thread.axf</span></code> or <code class="docutils literal notranslate"><span class="pre">Objects/rt-thread.hex</span></code> through DAP-Link. The project uses <code class="docutils literal notranslate"><span class="pre">board/linker_scripts/link.sct</span></code> and the <code class="docutils literal notranslate"><span class="pre">GD32H77x_78x_CNVM_2M.FLM</span></code> and <code class="docutils literal notranslate"><span class="pre">GD32H77x_78x_ECNVM_7M_512K.FLM</span></code> flash algorithms.</p>
+<p><code class="docutils literal notranslate"><span class="pre">template.uvprojx</span></code> and <code class="docutils literal notranslate"><span class="pre">template.uvoptx</span></code> hold the uVision defaults. SCons generates source groups, include paths, and defines from the current configuration. Regenerate the uVision project after changing configuration or source selection; generated source groups are overwritten.</p>
+</section>
+</section>
+<section id="example-operation">
+<h2>6. Example Operation<a class="headerlink" href="#example-operation" title="Link to this heading"></a></h2>
+<p>The sidebar contains each example’s README with its wiring, configuration, commands, and expected results. This table summarizes the prerequisites and first operation.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Project</p></th>
+<th class="head"><p>Prerequisite</p></th>
+<th class="head"><p>Operation or expected behavior</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_template</span></code></p></td>
+<td><p>board power</p></td>
+<td><p>PC4 blinks and the UART1 console is available</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_i2c</span></code></p></td>
+<td><p>pull-ups and an I2C target</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">i2c</span> <span class="pre">scan</span> <span class="pre">hwi2c1</span> <span class="pre">08</span> <span class="pre">78</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_spi</span></code></p></td>
+<td><p>SPI target and application-configured CS</p></td>
+<td><p>use <code class="docutils literal notranslate"><span class="pre">spi3</span></code>; configure the target protocol in the application</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_qspi_flash</span></code></p></td>
+<td><p>onboard GD25Q64E</p></td>
+<td><p>access files with <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/flash</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_sdcard</span></code></p></td>
+<td><p>FAT/FAT32 SD card</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/sd</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_can</span></code></p></td>
+<td><p>CAN transceiver, termination, and peer</p></td>
+<td><p>use <code class="docutils literal notranslate"><span class="pre">can1</span></code>; match bitrate and frame format to the peer</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_pwm</span></code></p></td>
+<td><p>external output connection as needed</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwm_dual_test</span> <span class="pre">start</span></code>; PWM on PA7/PG7</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_rtc</span></code></p></td>
+<td><p>RTC clock source</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_sdram</span></code></p></td>
+<td><p>onboard SDRAM</p></td>
+<td><p>external memory is added to the heap; <code class="docutils literal notranslate"><span class="pre">free</span></code>, <code class="docutils literal notranslate"><span class="pre">list_memheap</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_usb_device</span></code></p></td>
+<td><p>data-capable USB cable</p></td>
+<td><p>host enumerates the configured USB class</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_usb_host</span></code></p></td>
+<td><p>FAT USB drive</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/udisk</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_eth</span></code></p></td>
+<td><p>Ethernet cable and network</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>, <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">&lt;gateway&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_display_lvgl</span></code></p></td>
+<td><p>LCD, touch, and SDRAM</p></td>
+<td><p>LVGL demo starts automatically; operate it through touch</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_display_camera</span></code></p></td>
+<td><p>OV7670, LCD, and SDRAM</p></td>
+<td><p>automatic preview; <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code> / <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">stop</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_component_mqtt</span></code></p></td>
+<td><p>configured Wi-Fi and broker</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gd32vw553_mqtt_start</span></code>, <code class="docutils literal notranslate"><span class="pre">gd32vw553_mqtt_pub</span> <span class="pre">&lt;topic&gt;</span> <span class="pre">&lt;message&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_factory</span></code></p></td>
+<td><p>enabled board peripherals</p></td>
+<td><p>operate the integrated display, camera, storage, and network examples</p></td>
+</tr>
+</tbody>
+</table>
+<section id="flash-filesystem">
+<h3>Flash Filesystem<a class="headerlink" href="#flash-filesystem" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">filesystem</span></code> FAL partition is mounted at <code class="docutils literal notranslate"><span class="pre">/flash</span></code>. For a new partition that needs formatting:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mkfs -t elm filesystem
+mount filesystem /flash elm
+ls /flash
+</pre></div>
+</div>
+<p>Formatting erases existing partition data. FatFs must allow a 4096-byte maximum sector size.</p>
+</section>
+<section id="wi-fi-and-mqtt">
+<h3>Wi-Fi and MQTT<a class="headerlink" href="#wi-fi-and-mqtt" title="Link to this heading"></a></h3>
+<p>Configure the Wi-Fi SSID/password, broker address/port, topics, client ID, and optional authentication in RT-Thread Settings or <code class="docutils literal notranslate"><span class="pre">menuconfig</span></code>. Keep real credentials in local configuration. Use a numeric IPv4 broker address when module firmware does not support DNS through <code class="docutils literal notranslate"><span class="pre">AT+CIPDOMAIN</span></code>.</p>
+</section>
+<section id="display-and-camera">
+<h3>Display and Camera<a class="headerlink" href="#display-and-camera" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Gino_display_lvgl</span></code> starts the LVGL demo automatically. <code class="docutils literal notranslate"><span class="pre">Gino_display_camera</span></code> requests preview after LVGL initialization and displays QVGA RGB565 frames. Use <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">stop</span></code> and <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code> to control preview. LCD framebuffers remain in the reserved SDRAM area; application allocations must use the configured heap.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../_navigation/guides.html" class="btn btn-neutral float-left" title="Developer Guides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../_navigation/getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CYFS.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">Table of Contents</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">GD32H77D Gino SDK User Guide</a><ul>
+<li><a class="reference internal" href="#platform-and-tools">1. Platform and Tools</a><ul>
+<li><a class="reference internal" href="#sdk-directory-layout">SDK Directory Layout</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hardware-map">2. Hardware Map</a></li>
+<li><a class="reference internal" href="#memory-and-download-layout">3. Memory and Download Layout</a></li>
+<li><a class="reference internal" href="#rt-thread-studio">4. RT-Thread Studio</a></li>
+<li><a class="reference internal" href="#env-and-mdk">5. Env and MDK</a><ul>
+<li><a class="reference internal" href="#env-with-gcc">5.1 Env with GCC</a></li>
+<li><a class="reference internal" href="#mdk5-with-arm-compiler-6">5.2 MDK5 with Arm Compiler 6</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-operation">6. Example Operation</a><ul>
+<li><a class="reference internal" href="#flash-filesystem">Flash Filesystem</a></li>
+<li><a class="reference internal" href="#wi-fi-and-mqtt">Wi-Fi and MQTT</a></li>
+<li><a class="reference internal" href="#display-and-camera">Display and Camera</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> Version:1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        Built:<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

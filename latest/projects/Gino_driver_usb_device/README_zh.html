@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino_driver_usb_device &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=86952a2f"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+      <script src="../../_static/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static/version_info.js?v=193afac8"></script>
+      <script src="../../_static/language_switch.js?v=d198989a"></script>
+      <script src="../../_static/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Gino_driver_usb_host" href="../Gino_driver_usb_host/README_zh.html" />
+    <link rel="prev" title="Gino_driver_spi" href="../Gino_driver_spi/README_zh.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "zh", "enabled": true, "target_docname": "projects/Gino_driver_usb_device/README", "target_language": "en", "target_url": "README.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_zh.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/guides_zh.html">开发指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/project-guide/README_zh.html">GD32H77D Gino SDK 使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started_zh.html">快速开始</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_template/README_zh.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/drivers_zh.html">外设驱动</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_can/README_zh.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_eth/README_zh.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_i2c/README_zh.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_pwm/README_zh.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_qspi_flash/README_zh.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_rtc/README_zh.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdcard/README_zh.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdram/README_zh.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_spi/README_zh.html">Gino_driver_spi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_host/README_zh.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/display_zh.html">显示与摄像头</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_camera/README_zh.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_lvgl/README_zh.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components_zh.html">组件示例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_component_mqtt/README_zh.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/factory_zh.html">出厂演示</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_factory/README_zh.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_zh.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_zh.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/drivers_zh.html">外设驱动</a></li>
+      <li class="breadcrumb-item active">Gino_driver_usb_device</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gino-driver-usb-device">
+<h1>Gino_driver_usb_device<a class="headerlink" href="#gino-driver-usb-device" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>1. 简介<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>本工程是 GD32H77D Gino 开发板的 USBHS0 Device 参考工程，用于单独学习、配置和验证 USB Device 枚举与 CDC 类。独立工程只启用该功能需要的驱动和组件，可作为应用开发和功能集成的参考。</p>
+<p>主参考设备：<code class="docutils literal notranslate"><span class="pre">usbd</span></code>。</p>
+<p>CDC 数据设备：<code class="docutils literal notranslate"><span class="pre">vcom</span></code>。电脑打开 USB 虚拟串口并启用 DTR 后，应用每秒发送一条带序号的测试信息，并将收到的数据原样回显。</p>
+<p>所有示例均保留 <code class="docutils literal notranslate"><span class="pre">uart1</span></code> 作为 FinSH/MSH 控制台，串口参数为 115200-8-N-1；PC4 LED 用于运行指示。</p>
+<p>当前工程包含以下 MSH 命令：</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>命令</p></th>
+<th class="head"><p>作用</p></th>
+<th class="head"><p>示例/备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code></p></td>
+<td><p>检查当前示例使用的主要设备是否已注册。</p></td>
+<td><p>默认检查 <code class="docutils literal notranslate"><span class="pre">usbd</span></code>。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code></p></td>
+<td><p>查看系统已注册设备。</p></td>
+<td><p>确认 UART、PIN、总线和目标设备存在。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="usb-device-cdc">
+<h2>2. USB Device 枚举与 CDC 类详解<a class="headerlink" href="#usb-device-cdc" title="Link to this heading"></a></h2>
+<p>USBHS0 工作在 Device 角色，连接 PC 后响应总线复位和枚举请求，返回设备、配置、接口和端点描述符。当前配置启用 RT-Thread USB Device 与 CDC 组合类，PC 根据描述符加载相应驱动。</p>
+<p>一次完整的数据路径如下：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PC Host -&gt; Type-C D+/D- -&gt; USBHS0 Device -&gt; RT-Thread USB Device/CDC -&gt; 应用端点
+</pre></div>
+</div>
+<p>协议层只定义通信或数据处理规则，最终仍需要控制器时钟、引脚复用、中断/DMA 和上层状态机共同工作。扫描到设备、注册了总线或编译通过，都不能替代完整的数据传输验证。</p>
+</section>
+<section id="gd32h77d-usbhs0-device">
+<h2>3. GD32H77D 的 USBHS0 Device 特性<a class="headerlink" href="#gd32h77d-usbhs0-device" title="Link to this heading"></a></h2>
+<p>工程将 GD32H77D USBHS0 配置为 Device，使用 Type-C 接口 PA11/PA12。控制器响应 Host 的复位和端点事务；当前 RT-Thread 配置启用 USB Device、Composite 和 CDC 类。</p>
+</section>
+<section id="rt-thread-usb-device">
+<h2>4. RT-Thread USB Device 设备接口<a class="headerlink" href="#rt-thread-usb-device" title="Link to this heading"></a></h2>
+<p>RT-Thread USB Device 栈通过描述符定义设备、配置、接口和端点，并将类请求分派给 CDC 功能。该栈不是普通字符 <code class="docutils literal notranslate"><span class="pre">rt_device</span></code> 的简单替代，应用通常通过 USB 类回调或类设备接口收发数据。</p>
+<p>底层控制器注册为 <code class="docutils literal notranslate"><span class="pre">usbd</span></code>，CDC 串口接口注册为 <code class="docutils literal notranslate"><span class="pre">vcom</span></code>。应用通过 <code class="docutils literal notranslate"><span class="pre">rt_device_open()</span></code> 打开 <code class="docutils literal notranslate"><span class="pre">vcom</span></code>，使用 <code class="docutils literal notranslate"><span class="pre">rt_device_read()</span></code> / <code class="docutils literal notranslate"><span class="pre">rt_device_write()</span></code> 接收和回显数据，并在发送前通过 <code class="docutils literal notranslate"><span class="pre">RT_USBD_CLASS_CTRL_CONNECTED</span></code> 检查连接状态。该状态由电脑串口工具设置的 DTR 信号决定。<code class="docutils literal notranslate"><span class="pre">rt_kprintf()</span></code> 和 FinSH/MSH 仍使用 <code class="docutils literal notranslate"><span class="pre">uart1</span></code>。</p>
+</section>
+<section id="id2">
+<h2>5. 硬件说明<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>USBHS0 Device 使用 Type-C 接口和 PA11/PA12。请使用支持数据传输的 USB 线。</p>
+<p>默认控制台：UART1，PA2/PA3，AF7，115200-8-N-1。</p>
+<p>使用可传输数据的 USB 线，并确认 PC 发生枚举，而不是只给开发板供电。</p>
+</section>
+<section id="id3">
+<h2>6. 工程示例说明<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>以下源码路径以 SDK 仓库中的工程目录为基准：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/gd32_drivers/usb/drv_otghs_dev.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/gd32_drivers/usb/drv_usb_dev.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/gd32_drivers/usb/gd32h7_usb_hw.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rtconfig.h</span></code></p></li>
+</ul>
+<p>建议先阅读 <code class="docutils literal notranslate"><span class="pre">applications/main.c</span></code> 和 <code class="docutils literal notranslate"><span class="pre">applications/device_probe.c</span></code>，再沿数据路径进入对应驱动、组件或软件包。示例保留 MSH 命令，便于在不改动应用代码的情况下观察设备注册和运行状态。</p>
+<section id="id4">
+<h3>6.1 运行命令<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code></p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>6.2 运行步骤<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>检查供电、接线、外部模块和接口电平。</p></li>
+<li><p>复位开发板，确认 UART1 控制台可用且 PC4 LED 正常闪烁。</p></li>
+<li><p>在 UART1 控制台执行 <code class="docutils literal notranslate"><span class="pre">list_device</span></code>，确认 <code class="docutils literal notranslate"><span class="pre">usbd</span></code> 和 <code class="docutils literal notranslate"><span class="pre">vcom</span></code> 均已注册。<code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code> 检查的是 <code class="docutils literal notranslate"><span class="pre">usbd</span></code> 控制器。</p></li>
+<li><p>将 USBHS0 Type-C 接口连接电脑，在串口工具中打开枚举出的 USB 虚拟串口，参数选 115200-8-N-1，并启用 DTR。</p></li>
+<li><p>确认每秒收到一条带序号的测试信息。发送 <code class="docutils literal notranslate"><span class="pre">hello\r\n</span></code> 等短字符串，确认收到原样回显；关闭电脑串口工具的本地回显，避免把本地显示误认为设备回复。</p></li>
+<li><p>关闭并重新打开 USB 虚拟串口，启用 DTR 后确认周期数据恢复。本示例用于低速通信验证，接收缓冲区为 128 字节，回显测试请使用短数据包。</p></li>
+</ol>
+</section>
+</section>
+<section id="id6">
+<h2>7. 运行效果<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<section id="id7">
+<h3>7.1 预期现象<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>连接支持数据的 USB 线后，PC 能检测到新 USB/CDC 设备。</p></li>
+<li><p>设备管理器中无反复连接、断开或未知设备。</p></li>
+<li><p>UART1 控制台保持可用，可用于观察枚举日志。</p></li>
+<li><p>打开 USB 虚拟串口并启用 DTR 后，每秒收到一条数据：</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Gino USB CDC test: 0
+Gino USB CDC test: 1
+Gino USB CDC test: 2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>电脑发送的数据会原样回显，周期测试信息与回显数据共用同一个串口。</p></li>
+<li><p>DTR 关闭或 USB 断开时暂停发送，重新打开串口并启用 DTR 后恢复。</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../Gino_driver_spi/README_zh.html" class="btn btn-neutral float-left" title="Gino_driver_spi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../Gino_driver_usb_host/README_zh.html" class="btn btn-neutral float-right" title="Gino_driver_usb_host" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, CYFS。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">目录</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">Gino_driver_usb_device</a><ul>
+<li><a class="reference internal" href="#id1">1. 简介</a></li>
+<li><a class="reference internal" href="#usb-device-cdc">2. USB Device 枚举与 CDC 类详解</a></li>
+<li><a class="reference internal" href="#gd32h77d-usbhs0-device">3. GD32H77D 的 USBHS0 Device 特性</a></li>
+<li><a class="reference internal" href="#rt-thread-usb-device">4. RT-Thread USB Device 设备接口</a></li>
+<li><a class="reference internal" href="#id2">5. 硬件说明</a></li>
+<li><a class="reference internal" href="#id3">6. 工程示例说明</a><ul>
+<li><a class="reference internal" href="#id4">6.1 运行命令</a></li>
+<li><a class="reference internal" href="#id5">6.2 运行步骤</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">7. 运行效果</a><ul>
+<li><a class="reference internal" href="#id7">7.1 预期现象</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> 版本：1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        构建时间：<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

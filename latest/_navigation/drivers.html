@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peripheral Drivers &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../_static_en/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static_en/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static_en/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../_static_en/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../_static_en/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../_static_en/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../_static_en/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../_static_en/jquery.js?v=5d32c60e"></script>
+      <script src="../_static_en/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static_en/documentation_options.js?v=a12e3537"></script>
+      <script src="../_static_en/doctools.js?v=9bcbadda"></script>
+      <script src="../_static_en/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static_en/version_menu.js?v=d872e31e"></script>
+      <script src="../_static_en/download_pdf.js?v=a35b4182"></script>
+      <script src="../_static_en/version_info.js?v=193afac8"></script>
+      <script src="../_static_en/language_switch.js?v=d198989a"></script>
+      <script src="../_static_en/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../_static_en/page_outline.js?v=bcc2396b"></script>
+    <script src="../_static_en/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex_en.html" />
+    <link rel="search" title="Search" href="../search_en.html" />
+    <link rel="next" title="Gino_driver_can" href="../projects/Gino_driver_can/README.html" />
+    <link rel="prev" title="Gino_template" href="../projects/Gino_template/README.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "en", "enabled": true, "target_docname": "_navigation/drivers_zh", "target_language": "zh", "target_url": "drivers_zh.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "drivers_zh.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_en.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search_en.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guides.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../docs/project-guide/README.html">GD32H77D Gino SDK User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_template/README.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Peripheral Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="display.html">Display and Camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_component_mqtt/README.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="factory.html">Factory Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_factory/README.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_en.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_en.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Peripheral Drivers</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="peripheral-drivers">
+<h1>Peripheral Drivers<a class="headerlink" href="#peripheral-drivers" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_can/README.html">Gino_driver_can</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#can-arbitration-and-error-handling-details">2. CAN Arbitration and Error Handling Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#gd32h77d-can1-features">3. GD32H77D CAN1 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#rt-thread-can-device-interface">4. RT-Thread CAN Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_can/README.html#send-command">6.1 Send Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_can/README.html#receive-output">6.2 Receive Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_can/README.html#can-fd-configuration">6.3 CAN FD Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_can/README.html#validation">6.4 Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_can/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_eth/README.html">Gino_driver_eth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#ethernet-rmii-and-tcp-ip-layers-details">2. Ethernet, RMII, and TCP/IP Layers Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#gd32h77d-enet1-and-rmii-features">3. GD32H77D ENET1 and RMII Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#rt-thread-ethernet-netdev-and-sal-device-interface">4. RT-Thread Ethernet, Netdev, and SAL Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_eth/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html">Gino_driver_i2c</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#i2c-multi-master-slave-bus-protocol-details">2. I2C Multi-Master/Slave Bus Protocol Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#gd32h77d-i2c1-features">3. GD32H77D I2C1 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#rt-thread-i2c-bus-device-interface">4. RT-Thread I2C Bus Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_i2c/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html">Gino_driver_pwm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#pwm-timer-output-details">2. PWM Timer Output Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#gd32h77d-timer-pwm-features">3. GD32H77D Timer PWM Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#rt-thread-pwm-device-interface">4. RT-Thread PWM Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_pwm/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#qspi-nor-flash-and-filesystem-details">2. QSPI NOR Flash and Filesystem Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#gd32h77d-ospi0-and-mdma-features">3. GD32H77D OSPI0 and MDMA Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#rt-thread-fal-block-device-and-dfs-device-interface">4. RT-Thread FAL, Block Device, and DFS Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html">Gino_driver_rtc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#rtc-and-alarm-details">2. RTC and Alarm Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#gd32h77d-rtc-and-backup-domain-features">3. GD32H77D RTC and Backup Domain Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#rt-thread-rtc-and-alarm-device-interface">4. RT-Thread RTC and Alarm Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_rtc/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html">Gino_driver_sdcard</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#sd-sdio-block-protocol-details">2. SD/SDIO Block Protocol Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#gd32h77d-sdio1-features">3. GD32H77D SDIO1 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#rt-thread-sdio-block-device-and-dfs-device-interface">4. RT-Thread SDIO, Block Device, and DFS Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_sdcard/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html">Gino_driver_sdram</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#sdram-timing-refresh-and-heap-extension-details">2. SDRAM Timing, Refresh, and Heap Extension Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#gd32h77d-exmc-and-sdram-features">3. GD32H77D EXMC and SDRAM Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#rt-thread-memory-management-device-interface">4. RT-Thread Memory Management Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_sdram/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_spi/README.html">Gino_driver_spi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#spi-synchronous-serial-protocol-details">2. SPI Synchronous Serial Protocol Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#gd32h77d-spi3-features">3. GD32H77D SPI3 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#rt-thread-spi-bus-device-interface">4. RT-Thread SPI Bus Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_spi/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html">Gino_driver_usb_device</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#usb-device-enumeration-and-cdc-details">2. USB Device Enumeration and CDC Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#gd32h77d-usbhs0-device-features">3. GD32H77D USBHS0 Device Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#rt-thread-usb-device-interface">4. RT-Thread USB Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_usb_device/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html">Gino_driver_usb_host</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#usb-host-enumeration-and-mass-storage-details">2. USB Host Enumeration and Mass Storage Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#gd32h77d-usbhs1-host-features">3. GD32H77D USBHS1 Host Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#rt-thread-usb-host-and-dfs-device-interface">4. RT-Thread USB Host and DFS Device Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#hardware">5. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#example">6. Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#runtime-commands">6.1 Runtime Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#runtime-results">7. Runtime Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_driver_usb_host/README.html#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../projects/Gino_template/README.html" class="btn btn-neutral float-left" title="Gino_template" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../projects/Gino_driver_can/README.html" class="btn btn-neutral float-right" title="Gino_driver_can" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CYFS.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> Version:1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        Built:<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino_display_camera &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static_en/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static_en/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static_en/documentation_options.js?v=a12e3537"></script>
+      <script src="../../_static_en/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static_en/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static_en/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static_en/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static_en/version_info.js?v=193afac8"></script>
+      <script src="../../_static_en/language_switch.js?v=d198989a"></script>
+      <script src="../../_static_en/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static_en/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static_en/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex_en.html" />
+    <link rel="search" title="Search" href="../../search_en.html" />
+    <link rel="next" title="Gino_display_lvgl" href="../Gino_display_lvgl/README.html" />
+    <link rel="prev" title="Display and Camera" href="../../_navigation/display.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "en", "enabled": true, "target_docname": "projects/Gino_display_camera/README_zh", "target_language": "zh", "target_url": "README_zh.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README_zh.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_en.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search_en.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/guides.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/project-guide/README.html">GD32H77D Gino SDK User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_template/README.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/drivers.html">Peripheral Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_can/README.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_eth/README.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_i2c/README.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_pwm/README.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_rtc/README.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdcard/README.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdram/README.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_spi/README.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_device/README.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_host/README.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/display.html">Display and Camera</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_lvgl/README.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_component_mqtt/README.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/factory.html">Factory Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_factory/README.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_en.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_en.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/display.html">Display and Camera</a></li>
+      <li class="breadcrumb-item active">Gino_display_camera</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gino-display-camera">
+<h1>Gino_display_camera<a class="headerlink" href="#gino-display-camera" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This example provides OV7670 camera capture and live preview through LVGL and the MIPI LCD on the GD32H77D Gino board. Preview starts automatically after LVGL initialization.</p>
+<p>The primary device is <code class="docutils literal notranslate"><span class="pre">ov7670</span></code>. UART1 is the FinSH/MSH console at 115200-8-N-1, and PC4 is the run indicator.</p>
+</section>
+<section id="capture-and-display">
+<h2>2. Capture and Display<a class="headerlink" href="#capture-and-display" title="Link to this heading"></a></h2>
+<p>I2C2/SCCB configures OV7670, and TIMER0 supplies XCLK on PE9. DCI receives the parallel pixel stream. DMA1 channel 7 writes a dedicated capture buffer in internal AXI SRAM. After cache maintenance and RGB565 processing, <code class="docutils literal notranslate"><span class="pre">rt_device_read</span></code> copies a QVGA frame into the application’s destination buffer.</p>
+<p>The preview thread uses two additional internal AXI SRAM buffers. It tracks buffers being written, ready, and displayed so the LVGL image source remains stable until rendering completes. LVGL renders through a 32-line draw buffer, IPA updates the back framebuffer in SDRAM, and the LCD driver swaps framebuffers during vertical blanking.</p>
+</section>
+<section id="memory-requirements">
+<h2>3. Memory Requirements<a class="headerlink" href="#memory-requirements" title="Link to this heading"></a></h2>
+<p>The DMA capture buffer and the two preview buffers are aligned to 32 bytes. LCD framebuffers use the reserved SDRAM area; with LCD enabled, the SDRAM heap starts at <code class="docutils literal notranslate"><span class="pre">0xC0300000</span></code>.</p>
+<p>Board initialization completes SDRAM and MPU setup before enabling D-Cache. LCD use requires successful SDRAM initialization. A bootloader must clean and disable D-Cache before handing control to this firmware.</p>
+</section>
+<section id="device-interfaces">
+<h2>4. Device Interfaces<a class="headerlink" href="#device-interfaces" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">ov7670</span></code> device supports <code class="docutils literal notranslate"><span class="pre">rt_device_open</span></code> and <code class="docutils literal notranslate"><span class="pre">rt_device_read</span></code>. Allocate an output buffer large enough for a 320 x 240 RGB565 frame; a successful read returns the frame size in bytes.</p>
+<p>The preview uses the <code class="docutils literal notranslate"><span class="pre">lcd</span></code> graphic device, the LVGL image API, and the LVGL thread for UI updates. GT911 supplies touch input when enabled.</p>
+</section>
+<section id="hardware">
+<h2>5. Hardware<a class="headerlink" href="#hardware" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>OV7670: power, common ground, reset, XCLK, PCLK, VSYNC, HREF, D0-D7, and I2C2/SCCB connections.</p></li>
+<li><p>Camera control: I2C2 on PA8/PC9; XCLK on PE9.</p></li>
+<li><p>Display: MIPI LCD with SDRAM; GT911 touch on I2C3.</p></li>
+<li><p>Console: UART1 on PA2/PA3, AF7, 115200-8-N-1.</p></li>
+<li><p>Run LED: PC4, toggled every 500 ms.</p></li>
+</ul>
+<p>Connect the camera with the board powered off and use the module’s required supply and signal levels.</p>
+</section>
+<section id="example-operation">
+<h2>6. Example Operation<a class="headerlink" href="#example-operation" title="Link to this heading"></a></h2>
+<p>Source paths below are relative to the project directory in the SDK repository:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/main.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/lv_port.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/ov7670_preview.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/Board_Drivers/drv_ov7670.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/Board_Drivers/ports/camera/sensors/ov7670.c</span></code></p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code></p></td>
+<td><p>request live preview on the LCD</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">stop</span></code></p></td>
+<td><p>stop live preview and release the preview screen</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>Connect the camera, LCD, power, and console.</p></li>
+<li><p>Build and download this project using RT-Thread Studio or MDK5.</p></li>
+<li><p>Reset the board and wait for the LCD to display the camera image automatically.</p></li>
+<li><p>Use the start and stop commands when manual preview control is needed.</p></li>
+</ol>
+</section>
+<section id="expected-behavior">
+<h2>7. Expected Behavior<a class="headerlink" href="#expected-behavior" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>LVGL initializes the display and starts OV7670 preview.</p></li>
+<li><p>The LCD displays continuous QVGA RGB565 camera images.</p></li>
+<li><p>The preview can be stopped and restarted from the console.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../_navigation/display.html" class="btn btn-neutral float-left" title="Display and Camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Gino_display_lvgl/README.html" class="btn btn-neutral float-right" title="Gino_display_lvgl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CYFS.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">Table of Contents</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">Gino_display_camera</a><ul>
+<li><a class="reference internal" href="#introduction">1. Introduction</a></li>
+<li><a class="reference internal" href="#capture-and-display">2. Capture and Display</a></li>
+<li><a class="reference internal" href="#memory-requirements">3. Memory Requirements</a></li>
+<li><a class="reference internal" href="#device-interfaces">4. Device Interfaces</a></li>
+<li><a class="reference internal" href="#hardware">5. Hardware</a></li>
+<li><a class="reference internal" href="#example-operation">6. Example Operation</a></li>
+<li><a class="reference internal" href="#expected-behavior">7. Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> Version:1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        Built:<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

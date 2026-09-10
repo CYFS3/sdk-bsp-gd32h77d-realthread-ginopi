@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino_display_lvgl &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static_en/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static_en/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static_en/documentation_options.js?v=a12e3537"></script>
+      <script src="../../_static_en/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static_en/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static_en/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static_en/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static_en/version_info.js?v=193afac8"></script>
+      <script src="../../_static_en/language_switch.js?v=d198989a"></script>
+      <script src="../../_static_en/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static_en/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static_en/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex_en.html" />
+    <link rel="search" title="Search" href="../../search_en.html" />
+    <link rel="next" title="Components" href="../../_navigation/components.html" />
+    <link rel="prev" title="Gino_display_camera" href="../Gino_display_camera/README.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "en", "enabled": true, "target_docname": "projects/Gino_display_lvgl/README_zh", "target_language": "zh", "target_url": "README_zh.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README_zh.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_en.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search_en.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/guides.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/project-guide/README.html">GD32H77D Gino SDK User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_template/README.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/drivers.html">Peripheral Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_can/README.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_eth/README.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_i2c/README.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_pwm/README.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_rtc/README.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdcard/README.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdram/README.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_spi/README.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_device/README.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_host/README.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/display.html">Display and Camera</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_camera/README.html">Gino_display_camera</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_component_mqtt/README.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/factory.html">Factory Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_factory/README.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_en.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_en.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/display.html">Display and Camera</a></li>
+      <li class="breadcrumb-item active">Gino_display_lvgl</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gino-display-lvgl">
+<h1>Gino_display_lvgl<a class="headerlink" href="#gino-display-lvgl" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This project is the GD32H77D Gino development board reference project for MIPI DSI LCD, GT911 and LVGL graphics. It is used to learn, configure, and validate LVGL Rendering, Input, and Double Buffering separately. The standalone project enables only the drivers and components required by this feature, and can be used as a reference for application development and integration.</p>
+<p>Primary device: <code class="docutils literal notranslate"><span class="pre">lcd</span></code>.</p>
+<p>All examples keep <code class="docutils literal notranslate"><span class="pre">uart1</span></code> as the FinSH/MSH console at 115200-8-N-1, and PC4 LED is used as the run indicator.</p>
+<p>Current project provides the following MSH commands:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Example/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code></p></td>
+<td><p>Check whether the primary device used by this example is registered.</p></td>
+<td><p>Checks <code class="docutils literal notranslate"><span class="pre">lcd</span></code> by default.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lvgl-rendering-input-and-double-buffering-details">
+<h2>2. LVGL Rendering, Input, and Double Buffering Details<a class="headerlink" href="#lvgl-rendering-input-and-double-buffering-details" title="Link to this heading"></a></h2>
+<p>A dedicated LVGL thread initializes objects, display, and touch and periodically calls <code class="docutils literal notranslate"><span class="pre">lv_timer_handler</span></code> to process animations, input, and refreshes. This project uses two 200-line partial draw buffers in internal AXI SRAM. IPA asynchronously copies rendered rectangles to a single scanout framebuffer in SDRAM and releases each draw buffer after transfer completion.</p>
+<p>The complete data path is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GT911 input -&gt; LVGL objects/events -&gt; RGB565 buffer -&gt; cache clean/IPA -&gt; TLI/DSI -&gt; LCD
+</pre></div>
+</div>
+<p>The protocol layer only defines communication and data processing rules. Final validation still depends on controller clocks, pin multiplexing, interrupt/DMA handling, and upper-layer state machines. Device discovery, bus registration, or a successful build cannot replace a complete data transfer test.</p>
+</section>
+<section id="gd32h77d-sdram-tli-dsi-and-i2c3-features">
+<h2>3. GD32H77D SDRAM, TLI/DSI, and I2C3 Features<a class="headerlink" href="#gd32h77d-sdram-tli-dsi-and-i2c3-features" title="Link to this heading"></a></h2>
+<p>The project combines SDRAM, TLI, DSI, IPA, I2C3, and timer PWM. TLI/DSI scan framebuffers, GT911 supplies touch, IPA accelerates copies, and M7 D-Cache must be cleaned before hardware reads.</p>
+<p>Board initialization protects unused external address windows with MPU region 0; higher-priority regions keep valid SDRAM accessible. Mapped OSPI requires separate accessible MPU regions before this guard can be used.</p>
+<p>D-Cache remains disabled until SDRAM initialization and display-memory MPU setup finish. The LCD uses the MPU and cache attributes configured during board initialization. A bootloader must clean and disable D-Cache before handing control to this firmware.</p>
+</section>
+<section id="rt-thread-lvgl-graphic-and-touch-device-interface">
+<h2>4. RT-Thread LVGL, Graphic, and Touch Device Interface<a class="headerlink" href="#rt-thread-lvgl-graphic-and-touch-device-interface" title="Link to this heading"></a></h2>
+<p>The RT-Thread LVGL port creates an <code class="docutils literal notranslate"><span class="pre">LVGL</span></code> thread that calls <code class="docutils literal notranslate"><span class="pre">lv_timer_handler</span></code>. It uses the <code class="docutils literal notranslate"><span class="pre">lcd</span></code> graphic and <code class="docutils literal notranslate"><span class="pre">gt911</span></code> touch devices, with <code class="docutils literal notranslate"><span class="pre">lv_display_set_buffers</span></code> and a flush callback coordinating buffer handoff between LVGL and the BSP.</p>
+<p>Primary device: <code class="docutils literal notranslate"><span class="pre">lcd</span></code>. Use <code class="docutils literal notranslate"><span class="pre">list_device</span></code> and <code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code> first to check whether the device has been registered. Upper-layer file system, network, or GUI components still need separate validation for mount, link, or refresh state.</p>
+</section>
+<section id="hardware">
+<h2>5. Hardware<a class="headerlink" href="#hardware" title="Link to this heading"></a></h2>
+<p>Combines the LCD, GT911, SDRAM, and the offline LVGL package.</p>
+<p>Default console: UART1, PA2/PA3, AF7, 115200-8-N-1.</p>
+<p>Interact with the screen and check that animations and touch responses remain stable.</p>
+</section>
+<section id="example">
+<h2>6. Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>Source paths below are relative to the project directory in the SDK repository:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/lv_port.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/lv_conf.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../libraries/Board_Drivers/drv_lcd.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../../packages/LVGL-latest/env_support/rt-thread/lv_rt_thread_port.c</span></code></p></li>
+</ul>
+<p>Read <code class="docutils literal notranslate"><span class="pre">applications/main.c</span></code> and <code class="docutils literal notranslate"><span class="pre">applications/device_probe.c</span></code> first, then follow the data path into the corresponding driver, component, or package. The example keeps MSH commands so device registration and runtime state can be observed without changing application code.</p>
+<section id="runtime-commands">
+<h3>6.1 Runtime Commands<a class="headerlink" href="#runtime-commands" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code></p></li>
+</ul>
+</section>
+<section id="operation-steps">
+<h3>6.2 Operation Steps<a class="headerlink" href="#operation-steps" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Check power, wiring, external modules, and interface logic levels.</p></li>
+<li><p>Reset the development board and confirm that the UART1 console is available and PC4 LED blinks normally.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">list_device</span></code> and confirm that dependency buses and target devices are registered.</p></li>
+<li><p>Run the commands above in order while observing return values, external waveforms, network state, or display results.</p></li>
+</ol>
+</section>
+</section>
+<section id="runtime-results">
+<h2>7. Runtime Results<a class="headerlink" href="#runtime-results" title="Link to this heading"></a></h2>
+<section id="expected-behavior">
+<h3>7.1 Expected Behavior<a class="headerlink" href="#expected-behavior" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The LVGL demo appears and touch operates controls.</p></li>
+<li><p>Draw buffers alternate while IPA transfers screen updates to the LCD.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Gino_display_camera/README.html" class="btn btn-neutral float-left" title="Gino_display_camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../_navigation/components.html" class="btn btn-neutral float-right" title="Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CYFS.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">Table of Contents</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">Gino_display_lvgl</a><ul>
+<li><a class="reference internal" href="#introduction">1. Introduction</a></li>
+<li><a class="reference internal" href="#lvgl-rendering-input-and-double-buffering-details">2. LVGL Rendering, Input, and Double Buffering Details</a></li>
+<li><a class="reference internal" href="#gd32h77d-sdram-tli-dsi-and-i2c3-features">3. GD32H77D SDRAM, TLI/DSI, and I2C3 Features</a></li>
+<li><a class="reference internal" href="#rt-thread-lvgl-graphic-and-touch-device-interface">4. RT-Thread LVGL, Graphic, and Touch Device Interface</a></li>
+<li><a class="reference internal" href="#hardware">5. Hardware</a></li>
+<li><a class="reference internal" href="#example">6. Example</a><ul>
+<li><a class="reference internal" href="#runtime-commands">6.1 Runtime Commands</a></li>
+<li><a class="reference internal" href="#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#runtime-results">7. Runtime Results</a><ul>
+<li><a class="reference internal" href="#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> Version:1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        Built:<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

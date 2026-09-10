@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gino_factory &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static_en/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static_en/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static_en/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static_en/documentation_options.js?v=a12e3537"></script>
+      <script src="../../_static_en/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static_en/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static_en/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static_en/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static_en/version_info.js?v=193afac8"></script>
+      <script src="../../_static_en/language_switch.js?v=d198989a"></script>
+      <script src="../../_static_en/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static_en/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static_en/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex_en.html" />
+    <link rel="search" title="Search" href="../../search_en.html" />
+    <link rel="prev" title="Factory Demo" href="../../_navigation/factory.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "en", "enabled": true, "target_docname": "projects/Gino_factory/README_zh", "target_language": "zh", "target_url": "README_zh.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README_zh.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_en.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search_en.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/guides.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../docs/project-guide/README.html">GD32H77D Gino SDK User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_template/README.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/drivers.html">Peripheral Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_can/README.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_eth/README.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_i2c/README.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_pwm/README.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_qspi_flash/README.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_rtc/README.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdcard/README.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_sdram/README.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_spi/README.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_device/README.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_driver_usb_host/README.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/display.html">Display and Camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_camera/README.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_display_lvgl/README.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Gino_component_mqtt/README.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/factory.html">Factory Demo</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_en.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_en.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/factory.html">Factory Demo</a></li>
+      <li class="breadcrumb-item active">Gino_factory</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gino-factory">
+<h1>Gino_factory<a class="headerlink" href="#gino-factory" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This project combines LVGL, camera, MQTT, Ethernet, storage, and common peripherals on the GD32H77D Gino board. Use the touch interface and console to operate the enabled features.</p>
+<p>Primary device: <code class="docutils literal notranslate"><span class="pre">lcd</span></code>.</p>
+<p>All examples keep <code class="docutils literal notranslate"><span class="pre">uart1</span></code> as the FinSH/MSH console at 115200-8-N-1, and PC4 LED is used as the run indicator.</p>
+<p>Current project provides the following MSH commands:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Function</p></th>
+<th class="head"><p>Example/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code></p></td>
+<td><p>Request live camera preview on the LCD.</p></td>
+<td><p>Use after the display and camera are ready.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gd32vw553_mqtt_start</span></code></p></td>
+<td><p>Start the GD32VW553 MQTT demo.</p></td>
+<td><p>Connects Wi-Fi, Broker, and subscription path.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifconfig</span></code></p></td>
+<td><p>Check the connection state and IP address of the netdev.</p></td>
+<td><p>Confirm that the network is ready.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code></p></td>
+<td><p>List registered system devices.</p></td>
+<td><p>Confirm that UART, PIN, buses, and target devices exist.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">i2c</span> <span class="pre">scan</span> <span class="pre">hwi2c1</span> <span class="pre">08</span> <span class="pre">78</span></code></p></td>
+<td><p>Scan external I2C addresses <code class="docutils literal notranslate"><span class="pre">0x08-0x77</span></code>.</p></td>
+<td><p>Provided by <code class="docutils literal notranslate"><span class="pre">i2c-tools</span></code>; the external bus is <code class="docutils literal notranslate"><span class="pre">hwi2c1</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The I2C touch page scans only the external <code class="docutils literal notranslate"><span class="pre">hwi2c1</span></code> bus (SCL PH4, SDA PB11). Its Scan button uses address-only transfers in <code class="docutils literal notranslate"><span class="pre">board_demo_backend.c</span></code>. The camera and GT911 touch controller use <code class="docutils literal notranslate"><span class="pre">hwi2c2</span></code> and <code class="docutils literal notranslate"><span class="pre">hwi2c3</span></code> respectively; these buses have no scan entry in the UI. The console uses the bundled <code class="docutils literal notranslate"><span class="pre">i2c-tools</span> <span class="pre">v1.0.0</span></code> package in hardware bus mode. Run <code class="docutils literal notranslate"><span class="pre">mklinks.bat</span></code> on Windows or <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">mklinks.sh</span></code> on Linux before opening the project. Run <code class="docutils literal notranslate"><span class="pre">i2c</span></code> for scan/read/write usage; scan ranges are hexadecimal with an exclusive stop address.</p>
+<p>The SPI page performs a full-duplex SPI3 loopback test: connect PF1 (MOSI) to PF0 (MISO); SCK is PE12. The test uses mode 0, 8-bit data and no chip select. Select the maximum clock frequency and transfer length, then press Run loopback. The screen log shows queuing, configuration, the complete TX/RX hex data and PASS/FAIL, including the first mismatching byte offset and values.</p>
+<p>The I2C page uses a 16-column address matrix like <code class="docutils literal notranslate"><span class="pre">i2c-tools</span></code>: responding devices show their address, <code class="docutils literal notranslate"><span class="pre">--</span></code> means no response, <code class="docutils literal notranslate"><span class="pre">..</span></code> means unscanned, and <code class="docutils literal notranslate"><span class="pre">!!</span></code> marks a probe error. Reserved addresses remain blank. The scan covers <code class="docutils literal notranslate"><span class="pre">0x08-0x77</span></code>, updates each address result, and reports the device count and elapsed time. There is no per-address sleep. Bus locking waits at most 100 ms; while holding the lock, each probe temporarily caps the driver’s wait-stage timeout at 20 ms and then restores it. Timeouts or other bus errors stop the scan and preserve partial results instead of reporting an incomplete scan as an empty bus.</p>
+<p>The Scan log retains responding addresses, errors and the final result. SPI and I2C tests disable their buttons and parameter selectors while pending or running, and report submission errors. Logs also go to the console; each test retains the latest 3 KB for the current request in a scrollable screen panel. These screen logs cover requests made from the touch UI. The I2C page scans addresses only; it does not program chip data or firmware.</p>
+<section id="wi-fi-configuration">
+<h3>1.1 Wi-Fi Configuration<a class="headerlink" href="#wi-fi-configuration" title="Link to this heading"></a></h3>
+<p>Before running the factory demo, configure the Wi-Fi SSID and password for your own network. The procedure and screenshots follow <code class="docutils literal notranslate"><span class="pre">Gino_component_mqtt</span></code>, but each project has its own configuration: make these changes in <code class="docutils literal notranslate"><span class="pre">Gino_factory</span></code>.</p>
+<p>The onboard GD32VW553 AT module uses UART4 (TX PB12, RX PB13, AF14), with PC5 controlling reset. Its network device is <code class="docutils literal notranslate"><span class="pre">wifi0</span></code>; UART1 remains the console.</p>
+<p><strong>Env</strong></p>
+<ol class="arabic">
+<li><p>In Env, enter <code class="docutils literal notranslate"><span class="pre">projects\Gino_factory</span></code> from the SDK root and run <code class="docutils literal notranslate"><span class="pre">mklinks.bat</span></code> if the shared directory links have not been created.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">menuconfig</span></code> and open the following menu:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hardware Drivers Config
+    -&gt; Board extended module Drivers
+        -&gt; Enable GD32VW553 AT Wi-Fi module
+</pre></div>
+</div>
+</li>
+<li><p>Keep the module enabled and set <code class="docutils literal notranslate"><span class="pre">Wi-Fi</span> <span class="pre">SSID</span></code> and <code class="docutils literal notranslate"><span class="pre">Wi-Fi</span> <span class="pre">password</span></code> to your network’s values. Keep <code class="docutils literal notranslate"><span class="pre">GD32VW553</span> <span class="pre">AT</span> <span class="pre">UART</span> <span class="pre">baud</span> <span class="pre">rate</span></code> at <code class="docutils literal notranslate"><span class="pre">115200</span></code> unless the module firmware uses a different rate.</p></li>
+<li><p>Save and exit, then run <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--pyconfig-silent</span></code> to update <code class="docutils literal notranslate"><span class="pre">rtconfig.h</span></code>. For MDK5, also run <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--target=mdk5</span></code> to update the project files.</p></li>
+</ol>
+<p><img alt="Wi-Fi configuration in Env" src="../../_images_en/wifi-env.png" /></p>
+<p><strong>RT-Thread Studio</strong></p>
+<ol class="arabic simple">
+<li><p>Open the factory project’s <code class="docutils literal notranslate"><span class="pre">RT-Thread</span> <span class="pre">Settings</span></code> and select the hardware tab.</p></li>
+<li><p>Expand <code class="docutils literal notranslate"><span class="pre">Board</span> <span class="pre">extended</span> <span class="pre">module</span> <span class="pre">Drivers</span> <span class="pre">-&gt;</span> <span class="pre">Enable</span> <span class="pre">GD32VW553</span> <span class="pre">AT</span> <span class="pre">Wi-Fi</span> <span class="pre">module</span></code> and keep the module enabled.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">Wi-Fi</span> <span class="pre">SSID</span></code> and <code class="docutils literal notranslate"><span class="pre">Wi-Fi</span> <span class="pre">password</span></code>, confirm the AT UART baud rate, and save the settings to update the project configuration.</p></li>
+</ol>
+<p><img alt="Wi-Fi configuration in RT-Thread Studio" src="../../_images_en/wifi-studio.png" /></p>
+<p>The two fields correspond to <code class="docutils literal notranslate"><span class="pre">BSP_GD32VW553_WIFI_SSID</span></code> and <code class="docutils literal notranslate"><span class="pre">BSP_GD32VW553_WIFI_PASSWORD</span></code>. Use your own network values instead of the values shown in the screenshots. After saving, rebuild and download the factory firmware, then reset the board to apply the configuration.</p>
+</section>
+<section id="wi-fi-and-mqtt-verification">
+<h3>1.2 Wi-Fi and MQTT Verification<a class="headerlink" href="#wi-fi-and-mqtt-verification" title="Link to this heading"></a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> on UART1 and confirm that <code class="docutils literal notranslate"><span class="pre">wifi0</span></code> is up, its link is up, and its IP address is not <code class="docutils literal notranslate"><span class="pre">0.0.0.0</span></code>. The factory project also enables Ethernet <code class="docutils literal notranslate"><span class="pre">e0</span></code>; an Ethernet connection alone does not confirm that Wi-Fi is ready. If <code class="docutils literal notranslate"><span class="pre">wifi0</span></code> does not connect, check the SSID, password, access point availability, module power/reset, and AT UART baud rate.</p>
+<p>To use MQTT, keep <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">GD32VW553</span> <span class="pre">MQTT</span> <span class="pre">demo</span></code> enabled in the same configuration menu and set the broker address/port, subscribe/publish topics, client ID, and optional username/password for your service. You can use your own topics. Use a numeric IPv4 broker address when the module firmware does not support DNS through <code class="docutils literal notranslate"><span class="pre">AT+CIPDOMAIN</span></code>.</p>
+<p>After applying the configuration and confirming that <code class="docutils literal notranslate"><span class="pre">wifi0</span></code> is ready, run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>gd32vw553_mqtt_start
+gd32vw553_mqtt_pub rtt/gino hello
+gd32vw553_mqtt_stop
+</pre></div>
+</div>
+<p>Wait for the MQTT connection and subscription to succeed before publishing. Replace <code class="docutils literal notranslate"><span class="pre">rtt/gino</span></code> with your own topic and confirm that the broker/subscriber receives the message. The MQTT demo temporarily selects <code class="docutils literal notranslate"><span class="pre">wifi0</span></code> as the default network device and restores the previous default when it stops.</p>
+</section>
+</section>
+<section id="concurrent-peripheral-system-integration-details">
+<h2>2. Concurrent Peripheral System Integration Details<a class="headerlink" href="#concurrent-peripheral-system-integration-details" title="Link to this heading"></a></h2>
+<p>The factory project verifies that independently working features can share pins, initialization levels, DMA, cache, SDRAM, default routes, and heap. Display continuously scans SDRAM, camera and ENET use DMA, Wi-Fi/MQTT selects <code class="docutils literal notranslate"><span class="pre">wifi0</span></code> through SAL, and filesystems mount after devices register. This more closely represents a real product workload.</p>
+<p>The complete data path is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>driver registration -&gt; DFS/lwIP/LVGL/SAL -&gt; concurrent display + camera + storage + e0/wifi0 + MQTT
+</pre></div>
+</div>
+<p>The protocol layer only defines communication and data processing rules. Final validation still depends on controller clocks, pin multiplexing, interrupt/DMA handling, and upper-layer state machines. Device discovery, bus registration, or a successful build cannot replace a complete data transfer test.</p>
+</section>
+<section id="gd32h77d-multiple-buses-dma-engines-and-memories-features">
+<h2>3. GD32H77D Multiple Buses, DMA Engines, and Memories Features<a class="headerlink" href="#gd32h77d-multiple-buses-dma-engines-and-memories-features" title="Link to this heading"></a></h2>
+<p>The integrated project uses SDRAM/TLI/DSI, DCI/DMA, ENET1, OSPI0, SDIO1, USBHS, CAN, SPI, I2C, UART, and timers together. It validates shared pins, DMA, cache, bandwidth, memory regions, and interrupt priorities.</p>
+</section>
+<section id="rt-thread-integrated-devices-and-components-device-interface">
+<h2>4. RT-Thread Integrated Devices and Components Device Interface<a class="headerlink" href="#rt-thread-integrated-devices-and-components-device-interface" title="Link to this heading"></a></h2>
+<p>RT-Thread runs the device framework, DFS/FAL/FatFs, lwIP/netdev/SAL, at_device, LVGL, touch, camera, and MQTT threads together. Stable names, init levels, and IPC coordinate modules.</p>
+<p>Primary device: <code class="docutils literal notranslate"><span class="pre">lcd</span></code>. Use <code class="docutils literal notranslate"><span class="pre">list_device</span></code> and <code class="docutils literal notranslate"><span class="pre">gino_device_probe</span></code> first to check whether the device has been registered. Upper-layer file system, network, or GUI components still need separate validation for mount, link, or refresh state.</p>
+</section>
+<section id="hardware">
+<h2>5. Hardware<a class="headerlink" href="#hardware" title="Link to this heading"></a></h2>
+<p>Enables the 720 x 720 LCD, GT911, OV7670, GD32VW553, ENET1, OSPI flash, SDIO, USB, CAN, SPI, I2C, and PWM. Follow each standalone project’s wiring and electrical requirements.</p>
+<p>Default console: UART1, PA2/PA3, AF7, 115200-8-N-1.</p>
+</section>
+<section id="example">
+<h2>6. Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>Source paths below are relative to the project directory in the SDK repository:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/board_demo.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/board_demo_backend.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/lv_port.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/ov7670_preview.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applications/gd32vw553_mqtt_demo.c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">board/SConscript</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">tests/run_host_tests.ps1</span></code> uses host GCC and a simulated bus to check command dispatch, scan results, timeout aborts and timeout restoration without building firmware. It defaults to MSYS2 UCRT64 GCC; use <code class="docutils literal notranslate"><span class="pre">-Compiler</span></code> to select another path. Tests extract the current backend functions directly and do not replace board checks of wiring, ACK signals or actual scan timing.</p>
+<p>Read <code class="docutils literal notranslate"><span class="pre">applications/main.c</span></code> and <code class="docutils literal notranslate"><span class="pre">applications/device_probe.c</span></code> first, then follow the data path into the corresponding driver, component, or package. The example keeps MSH commands so device registration and runtime state can be observed without changing application code.</p>
+<section id="runtime-commands">
+<h3>6.1 Runtime Commands<a class="headerlink" href="#runtime-commands" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gd32vw553_mqtt_start</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ifconfig</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i2c</span> <span class="pre">scan</span> <span class="pre">hwi2c1</span> <span class="pre">08</span> <span class="pre">78</span></code></p></li>
+</ul>
+</section>
+<section id="operation-steps">
+<h3>6.2 Operation Steps<a class="headerlink" href="#operation-steps" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Check power, wiring, external modules, and interface logic levels.</p></li>
+<li><p>Reset the development board and confirm that the UART1 console is available and PC4 LED blinks normally.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">list_device</span></code> and confirm that dependency buses and target devices are registered.</p></li>
+<li><p>Run the commands above in order while observing return values, external waveforms, network state, or display results.</p></li>
+</ol>
+</section>
+</section>
+<section id="runtime-results">
+<h2>7. Runtime Results<a class="headerlink" href="#runtime-results" title="Link to this heading"></a></h2>
+<section id="expected-behavior">
+<h3>7.1 Expected Behavior<a class="headerlink" href="#expected-behavior" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list_device</span></code> shows enabled display, touch, camera, storage, network, and bus devices.</p></li>
+<li><p>LVGL, preview, Ethernet/Wi-Fi, and filesystems start independently and coexist under reasonable load.</p></li>
+<li><p>The touch UI provides board feature controls; the console can operate camera, networking, and MQTT.</p></li>
+<li><p>The I2C touch page and <code class="docutils literal notranslate"><span class="pre">i2c</span> <span class="pre">scan</span></code> list responding slave addresses on the selected bus.</p></li>
+<li><p>The SPI loopback page shows TX/RX data and verification results; the I2C page shows scan progress logs and responding addresses.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../_navigation/factory.html" class="btn btn-neutral float-left" title="Factory Demo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, CYFS.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">Table of Contents</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">Gino_factory</a><ul>
+<li><a class="reference internal" href="#introduction">1. Introduction</a><ul>
+<li><a class="reference internal" href="#wi-fi-configuration">1.1 Wi-Fi Configuration</a></li>
+<li><a class="reference internal" href="#wi-fi-and-mqtt-verification">1.2 Wi-Fi and MQTT Verification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#concurrent-peripheral-system-integration-details">2. Concurrent Peripheral System Integration Details</a></li>
+<li><a class="reference internal" href="#gd32h77d-multiple-buses-dma-engines-and-memories-features">3. GD32H77D Multiple Buses, DMA Engines, and Memories Features</a></li>
+<li><a class="reference internal" href="#rt-thread-integrated-devices-and-components-device-interface">4. RT-Thread Integrated Devices and Components Device Interface</a></li>
+<li><a class="reference internal" href="#hardware">5. Hardware</a></li>
+<li><a class="reference internal" href="#example">6. Example</a><ul>
+<li><a class="reference internal" href="#runtime-commands">6.1 Runtime Commands</a></li>
+<li><a class="reference internal" href="#operation-steps">6.2 Operation Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#runtime-results">7. Runtime Results</a><ul>
+<li><a class="reference internal" href="#expected-behavior">7.1 Expected Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> Version:1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        Built:<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GD32H77D Gino SDK 使用指南 &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=86952a2f"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+      <script src="../../_static/version_menu.js?v=d872e31e"></script>
+      <script src="../../_static/download_pdf.js?v=a35b4182"></script>
+      <script src="../../_static/version_info.js?v=193afac8"></script>
+      <script src="../../_static/language_switch.js?v=d198989a"></script>
+      <script src="../../_static/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../../_static/page_outline.js?v=bcc2396b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="快速开始" href="../../_navigation/getting_started_zh.html" />
+    <link rel="prev" title="开发指南" href="../../_navigation/guides_zh.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "zh", "enabled": true, "target_docname": "docs/project-guide/README", "target_language": "en", "target_url": "README.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "README.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index_zh.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../_navigation/guides_zh.html">开发指南</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GD32H77D Gino SDK 使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/getting_started_zh.html">快速开始</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_template/README_zh.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/drivers_zh.html">外设驱动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_can/README_zh.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_eth/README_zh.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_i2c/README_zh.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_pwm/README_zh.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_qspi_flash/README_zh.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_rtc/README_zh.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_sdcard/README_zh.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_sdram/README_zh.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_spi/README_zh.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_usb_device/README_zh.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_driver_usb_host/README_zh.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/display_zh.html">显示与摄像头</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_display_camera/README_zh.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_display_lvgl/README_zh.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/components_zh.html">组件示例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_component_mqtt/README_zh.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_navigation/factory_zh.html">出厂演示</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/Gino_factory/README_zh.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index_zh.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index_zh.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../_navigation/guides_zh.html">开发指南</a></li>
+      <li class="breadcrumb-item active">GD32H77D Gino SDK 使用指南</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="gd32h77d-gino-sdk">
+<h1>GD32H77D Gino SDK 使用指南<a class="headerlink" href="#gd32h77d-gino-sdk" title="Link to this heading"></a></h1>
+<p><a href="README.html">English</a> | <a class="reference external" href="https://github.com/RT-Thread-Studio/sdk-bsp-gd32h77d-realthread-ginopi/blob/main/README_zh.md">SDK 概览</a></p>
+<p>本文介绍 SDK 目录、工程选择、硬件连接、工程创建、编译下载和示例使用方法。</p>
+<section id="id1">
+<h2>1. 平台与开发环境<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>开发板：GD32H77D Gino；MCU：GD32H77DIW，Arm Cortex-M7，最高 600 MHz。</p></li>
+<li><p>RT-Thread：5.3.0。</p></li>
+<li><p>RT-Thread Studio 工具链：GNU Arm Embedded 13.3。</p></li>
+<li><p>Env：2.0 或更新版本，并配置 GNU Arm Embedded 工具链。</p></li>
+<li><p>MDK：Keil MDK 5.43 或兼容版本、Arm Compiler 6、GigaDevice <code class="docutils literal notranslate"><span class="pre">GD32H77x_78x_DFP</span></code> 0.6.1 和 DAP-Link（CMSIS-DAP）。</p></li>
+<li><p>下载接口：SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 DAP-Link（CMSIS-DAP）。</p></li>
+<li><p>控制台：UART1，PA2/PA3，AF7，115200-8-N-1。</p></li>
+<li><p>工程数量：16 个，包括 <code class="docutils literal notranslate"><span class="pre">Gino_template</span></code> 和 15 个示例。</p></li>
+</ul>
+<section id="sdk">
+<h3>SDK 目录<a class="headerlink" href="#sdk" title="Link to this heading"></a></h3>
+<p>各示例共享 RT-Thread 内核、GD32 库、板级驱动和离线软件包。以下路径相对于 SDK 根目录。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>目录</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">projects/&lt;name&gt;/applications</span></code></p></td>
+<td><p>应用入口与示例代码</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">projects/&lt;name&gt;/board</span></code></p></td>
+<td><p>工程板级配置与链接脚本</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">libraries/Board_Drivers</span></code></p></td>
+<td><p>共享板级初始化与板载外设驱动</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">libraries/gd32_drivers</span></code></p></td>
+<td><p>GD32 外设的 RT-Thread 驱动</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">libraries/gd32-arm-*</span></code></p></td>
+<td><p>GD32 CMSIS、启动代码与外设固件库</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rt-thread</span></code></p></td>
+<td><p>RT-Thread 内核、组件与构建工具</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">packages</span></code></p></td>
+<td><p>示例使用的离线软件包</p></td>
+</tr>
+</tbody>
+</table>
+<p>每个工程拥有独立的 <code class="docutils literal notranslate"><span class="pre">.config</span></code>、<code class="docutils literal notranslate"><span class="pre">rtconfig.h</span></code>、Studio 元数据和 MDK 工程文件。功能配置在所选工程中修改；共享驱动的修改会影响使用该驱动的其他工程。</p>
+<p>首次编译或新建应用建议从 <a class="reference internal" href="../../projects/Gino_template/README_zh.html"><span class="std std-doc">Gino_template</span></a> 开始。验证外设时，按第 6 节选择对应的独立示例；体验开发板综合功能时，使用 <a class="reference internal" href="../../projects/Gino_factory/README_zh.html"><span class="std std-doc">Gino_factory</span></a>。</p>
+</section>
+</section>
+<section id="id2">
+<h2>2. 硬件映射<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>外设</p></th>
+<th class="head"><p>引脚或资源</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>运行 LED</p></td>
+<td><p>PC4</p></td>
+<td><p>每 500 ms 翻转</p></td>
+</tr>
+<tr class="row-odd"><td><p>UART1</p></td>
+<td><p>PA2/PA3，AF7</p></td>
+<td><p>控制台</p></td>
+</tr>
+<tr class="row-even"><td><p>UART4</p></td>
+<td><p>PB12/PB13，AF14</p></td>
+<td><p>GD32VW553 AT 模块</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C1</p></td>
+<td><p>PH4/PB11，AF4</p></td>
+<td><p>独立 I2C 示例</p></td>
+</tr>
+<tr class="row-even"><td><p>I2C2</p></td>
+<td><p>PA8/PC9，AF4</p></td>
+<td><p>OV7670 控制</p></td>
+</tr>
+<tr class="row-odd"><td><p>I2C3</p></td>
+<td><p>PD12/PD13，AF4</p></td>
+<td><p>GT911 触摸</p></td>
+</tr>
+<tr class="row-even"><td><p>SPI3</p></td>
+<td><p>PE12/PF0/PF1</p></td>
+<td><p>SCK/MISO/MOSI</p></td>
+</tr>
+<tr class="row-odd"><td><p>CAN1</p></td>
+<td><p>PB4/PB5</p></td>
+<td><p>需要外接 CAN 收发器和终端电阻</p></td>
+</tr>
+<tr class="row-even"><td><p>LCD 背光</p></td>
+<td><p>TIMER1 CH0，PA0</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwm1</span></code> 通道 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>PWM 输出</p></td>
+<td><p>PA7 与 PG7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwm2</span></code> 通道 2 和 <code class="docutils literal notranslate"><span class="pre">pwm30</span></code> 通道 3</p></td>
+</tr>
+<tr class="row-even"><td><p>GT911</p></td>
+<td><p>reset PH3，interrupt PH5</p></td>
+<td><p>地址 <code class="docutils literal notranslate"><span class="pre">0x5D</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>OV7670</p></td>
+<td><p>XCLK PE9，I2C2，DCI + DMA1 通道 7</p></td>
+<td><p>QVGA RGB565</p></td>
+</tr>
+<tr class="row-even"><td><p>QSPI Flash</p></td>
+<td><p>CS PC11，CLK PF10，D0-D3 PF8/PF9/PF7/PA1</p></td>
+<td><p>8 MiB GD25Q64E，连接 OSPI0</p></td>
+</tr>
+<tr class="row-odd"><td><p>USB Device</p></td>
+<td><p>USBHS0，PA11/PA12</p></td>
+<td><p>Type-C</p></td>
+</tr>
+<tr class="row-even"><td><p>USB Host</p></td>
+<td><p>USBHS1，PB14/PB15，VBUS PF2</p></td>
+<td><p>USB-A</p></td>
+</tr>
+<tr class="row-odd"><td><p>以太网</p></td>
+<td><p>ENET1 RMII</p></td>
+<td><p>PHY 地址 2，PC12 输入 50 MHz REF_CLK</p></td>
+</tr>
+<tr class="row-even"><td><p>SDRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0xC0000000</span></code>，32 MiB</p></td>
+<td><p>显示缓冲和扩展 heap</p></td>
+</tr>
+</tbody>
+</table>
+<p>外接模块的供电、共地和接口电平要求，以对应工程 README 的硬件说明为准。</p>
+</section>
+<section id="id3">
+<h2>3. 内存与下载布局<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>区域</p></th>
+<th class="head"><p>地址</p></th>
+<th class="head"><p>大小</p></th>
+<th class="head"><p>用途</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CNVM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x08010000</span></code></p></td>
+<td><p>1984 KiB</p></td>
+<td><p>应用向量表、启动代码和主程序</p></td>
+</tr>
+<tr class="row-odd"><td><p>ECNVM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x08200000</span></code></p></td>
+<td><p>7680 KiB</p></td>
+<td><p>扩展程序 Flash，由链接脚本分配</p></td>
+</tr>
+<tr class="row-even"><td><p>ITCMRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x00000000</span></code></p></td>
+<td><p>128 KiB</p></td>
+<td><p>按链接脚本分配</p></td>
+</tr>
+<tr class="row-odd"><td><p>DTCMRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x20000000</span></code></p></td>
+<td><p>256 KiB</p></td>
+<td><p>按链接脚本分配</p></td>
+</tr>
+<tr class="row-even"><td><p>AXISRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x24000000</span></code></p></td>
+<td><p>768 KiB</p></td>
+<td><p>data、BSS、栈、内部 heap 和摄像头缓冲</p></td>
+</tr>
+<tr class="row-odd"><td><p>SRAM1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x30004000</span></code></p></td>
+<td><p>16 KiB</p></td>
+<td><p>以太网 DMA 描述符和缓冲</p></td>
+</tr>
+<tr class="row-even"><td><p>SDRAM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0xC0000000</span></code></p></td>
+<td><p>32 MiB</p></td>
+<td><p>显示缓冲和扩展 heap</p></td>
+</tr>
+</tbody>
+</table>
+<p>应用向量表位于 <code class="docutils literal notranslate"><span class="pre">0x08010000</span></code>，<code class="docutils literal notranslate"><span class="pre">0x08000000</span></code> 的启动入口用于兼容不同芯片版本。默认生成的 BIN 镜像包含该启动入口，应用向量表位于镜像偏移 <code class="docutils literal notranslate"><span class="pre">0x10000</span></code>。将完整 BIN 镜像下载到 <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code>。</p>
+<p>启用 <code class="docutils literal notranslate"><span class="pre">BSP_USING_LCD_MIPI</span></code> 时，SDRAM 前 3 MiB 为预留区，扩展 heap 从 <code class="docutils literal notranslate"><span class="pre">0xC0300000</span></code> 开始；未启用 LCD 时，SDRAM heap 从 <code class="docutils literal notranslate"><span class="pre">0xC0000000</span></code> 开始。摄像头采集和预览缓冲使用内部 AXI SRAM，与 SDRAM 显示区域分开管理。</p>
+</section>
+<section id="rt-thread-studio">
+<h2>4. RT-Thread Studio<a class="headerlink" href="#rt-thread-studio" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>安装 <code class="docutils literal notranslate"><span class="pre">sdk-bsp-gd32h77d-gino.yaml</span></code> 描述的 GD32H77D-Gino BSP <strong>v1.0.0</strong>。</p></li>
+<li><p>新建基于 <code class="docutils literal notranslate"><span class="pre">GD32H77D-Gino</span></code> 开发板的 RT-Thread 工程。</p></li>
+<li><p>选择 <code class="docutils literal notranslate"><span class="pre">Gino_template</span></code> 或 15 个示例中的一个。</p></li>
+<li><p>在 RT-Thread Settings 中配置需要的外设和软件包，使用 GNU Arm Embedded 13.3 构建。</p></li>
+<li><p>连接 UART1，设置为 115200-8-N-1，并连接 SWD 下载器。</p></li>
+<li><p>选择 DAP-Link、目标 <code class="docutils literal notranslate"><span class="pre">GD32H77DIW</span></code> 和 BIN 模式，将下载起始地址设为 <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code>，下载 <code class="docutils literal notranslate"><span class="pre">Debug/rtthread.bin</span></code>。SDK 默认使用这些下载设置，构建时保留 <code class="docutils literal notranslate"><span class="pre">Debug/rtthread.elf</span></code> 用于调试。</p></li>
+<li><p>复位开发板，按下文运行对应示例。</p></li>
+</ol>
+<p>Studio 创建出的工程包含该示例需要的共享源码目录。</p>
+</section>
+<section id="env-mdk">
+<h2>5. Env 与 MDK<a class="headerlink" href="#env-mdk" title="Link to this heading"></a></h2>
+<section id="env-gcc">
+<h3>5.1 Env 与 GCC<a class="headerlink" href="#env-gcc" title="Link to this heading"></a></h3>
+<p>在 Env PowerShell 环境中，从 SDK 根目录进入目标工程。以模板为例：</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd </span><span class="n">projects</span><span class="p">\</span><span class="n">Gino_template</span>
+<span class="p">.\</span><span class="n">mklinks</span><span class="p">.</span><span class="n">bat</span>
+<span class="nv">$env:RTT_CC</span> <span class="p">=</span> <span class="s2">"gcc"</span>
+<span class="nv">$env:RTT_EXEC_PATH</span> <span class="p">=</span> <span class="s2">"&lt;gnu-arm-toolchain&gt;\bin"</span>
+<span class="n">scons</span> <span class="p">-</span><span class="n">-pyconfig-silent</span>
+<span class="n">scons</span> <span class="n">-j8</span>
+</pre></div>
+</div>
+<p>将工具链路径替换为包含 <code class="docutils literal notranslate"><span class="pre">arm-none-eabi-gcc</span></code> 的目录。<code class="docutils literal notranslate"><span class="pre">mklinks.bat</span></code> 为共享的 <code class="docutils literal notranslate"><span class="pre">rt-thread</span></code> 和 <code class="docutils literal notranslate"><span class="pre">libraries</span></code> 创建目录链接。SCons 构建生成 <code class="docutils literal notranslate"><span class="pre">rt-thread.elf</span></code>、<code class="docutils literal notranslate"><span class="pre">rtthread.hex</span></code> 和 <code class="docutils literal notranslate"><span class="pre">rtthread.bin</span></code>，将 <code class="docutils literal notranslate"><span class="pre">rtthread.bin</span></code> 下载到 <code class="docutils literal notranslate"><span class="pre">0x08000000</span></code>。</p>
+<p>通过 <code class="docutils literal notranslate"><span class="pre">menuconfig</span></code> 修改功能后，使用 <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--pyconfig-silent</span></code> 重新生成 <code class="docutils literal notranslate"><span class="pre">rtconfig.h</span></code>。需要重新生成 Eclipse 工程元数据时，执行 <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--target=eclipse</span></code>。</p>
+</section>
+<section id="mdk5-arm-compiler-6">
+<h3>5.2 MDK5 与 Arm Compiler 6<a class="headerlink" href="#mdk5-arm-compiler-6" title="Link to this heading"></a></h3>
+<p>安装第 1 节列出的 MDK 依赖，在 Env PowerShell 环境中从 SDK 根目录进入目标工程：</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd </span><span class="n">projects</span><span class="p">\</span><span class="n">Gino_template</span>
+<span class="p">.\</span><span class="n">mklinks</span><span class="p">.</span><span class="n">bat</span>
+<span class="nv">$env:RTT_CC</span> <span class="p">=</span> <span class="s2">"keil"</span>
+<span class="nv">$env:RTT_EXEC_PATH</span> <span class="p">=</span> <span class="s2">"C:\Keil_v5"</span>
+<span class="n">scons</span> <span class="p">-</span><span class="n">-pyconfig-silent</span>
+<span class="n">scons</span> <span class="p">-</span><span class="n">-target</span><span class="p">=</span><span class="n">mdk5</span> <span class="p">-</span><span class="n">-project-name</span><span class="p">=</span><span class="n">project</span>
+</pre></div>
+</div>
+<p>将 <code class="docutils literal notranslate"><span class="pre">RTT_EXEC_PATH</span></code> 调整为实际 MDK 安装根目录。打开 <code class="docutils literal notranslate"><span class="pre">project.uvprojx</span></code>，构建与工程目录同名的 target。在 <code class="docutils literal notranslate"><span class="pre">Options</span> <span class="pre">for</span> <span class="pre">Target</span> <span class="pre">-&gt;</span> <span class="pre">Debug</span></code> 中选择 <code class="docutils literal notranslate"><span class="pre">CMSIS-DAP</span> <span class="pre">Debugger</span></code>，在 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> 中选择连接的 DAP-Link 和 SWD 接口，通过 DAP-Link 下载 <code class="docutils literal notranslate"><span class="pre">Objects/rt-thread.axf</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Objects/rt-thread.hex</span></code>。工程使用 <code class="docutils literal notranslate"><span class="pre">board/linker_scripts/link.sct</span></code>，以及 <code class="docutils literal notranslate"><span class="pre">GD32H77x_78x_CNVM_2M.FLM</span></code> 和 <code class="docutils literal notranslate"><span class="pre">GD32H77x_78x_ECNVM_7M_512K.FLM</span></code> 两个 Flash 算法。</p>
+<p><code class="docutils literal notranslate"><span class="pre">template.uvprojx</span></code> 和 <code class="docutils literal notranslate"><span class="pre">template.uvoptx</span></code> 保存 uVision 默认配置。SCons 根据当前配置生成源码分组、包含路径和宏定义。配置或源码选择变更后需要重新生成 uVision 工程，生成的源码分组会被覆盖。</p>
+</section>
+</section>
+<section id="id4">
+<h2>6. 示例使用<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>各示例的接线、配置、命令和预期现象见侧栏中的对应工程文档。下表汇总运行前置条件和首次操作。</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>工程</p></th>
+<th class="head"><p>前置条件</p></th>
+<th class="head"><p>操作或预期行为</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_template</span></code></p></td>
+<td><p>开发板供电</p></td>
+<td><p>PC4 闪烁，UART1 控制台可用</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_i2c</span></code></p></td>
+<td><p>上拉电阻和 I2C 目标设备</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">i2c</span> <span class="pre">scan</span> <span class="pre">hwi2c1</span> <span class="pre">08</span> <span class="pre">78</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_spi</span></code></p></td>
+<td><p>SPI 目标设备及应用配置的 CS</p></td>
+<td><p>使用 <code class="docutils literal notranslate"><span class="pre">spi3</span></code> 总线，在应用中配置从设备协议</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_qspi_flash</span></code></p></td>
+<td><p>板载 GD25Q64E</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/flash</span></code> 访问文件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_sdcard</span></code></p></td>
+<td><p>FAT/FAT32 SD 卡</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/sd</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_can</span></code></p></td>
+<td><p>CAN 收发器、终端电阻和通信对端</p></td>
+<td><p>使用 <code class="docutils literal notranslate"><span class="pre">can1</span></code>，波特率和帧格式与对端一致</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_pwm</span></code></p></td>
+<td><p>按需连接输出端</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwm_dual_test</span> <span class="pre">start</span></code>，PA7/PG7 输出 PWM</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_rtc</span></code></p></td>
+<td><p>RTC 时钟源</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_sdram</span></code></p></td>
+<td><p>板载 SDRAM</p></td>
+<td><p>外部内存加入 heap；<code class="docutils literal notranslate"><span class="pre">free</span></code>、<code class="docutils literal notranslate"><span class="pre">list_memheap</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_usb_device</span></code></p></td>
+<td><p>支持数据传输的 USB 线</p></td>
+<td><p>主机枚举配置的 USB class</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_usb_host</span></code></p></td>
+<td><p>FAT U 盘</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/udisk</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_driver_eth</span></code></p></td>
+<td><p>网线及可用网络</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>、<code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">&lt;gateway&gt;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_display_lvgl</span></code></p></td>
+<td><p>LCD、触摸和 SDRAM</p></td>
+<td><p>自动启动 LVGL demo，通过触摸操作</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_display_camera</span></code></p></td>
+<td><p>OV7670、LCD 和 SDRAM</p></td>
+<td><p>自动预览；<code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code> / <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">stop</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_component_mqtt</span></code></p></td>
+<td><p>已配置 Wi-Fi 和 broker</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gd32vw553_mqtt_start</span></code>、<code class="docutils literal notranslate"><span class="pre">gd32vw553_mqtt_pub</span> <span class="pre">&lt;topic&gt;</span> <span class="pre">&lt;message&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gino_factory</span></code></p></td>
+<td><p>已启用的板级外设</p></td>
+<td><p>使用综合界面及摄像头、存储和网络示例</p></td>
+</tr>
+</tbody>
+</table>
+<section id="flash">
+<h3>Flash 文件系统<a class="headerlink" href="#flash" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">filesystem</span></code> FAL 分区挂载到 <code class="docutils literal notranslate"><span class="pre">/flash</span></code>。对于需要格式化的新分区：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mkfs -t elm filesystem
+mount filesystem /flash elm
+ls /flash
+</pre></div>
+</div>
+<p>格式化会清除分区原有数据。FatFs 需要允许最大 4096 字节扇区。</p>
+</section>
+<section id="wi-fi-mqtt">
+<h3>Wi-Fi 与 MQTT<a class="headerlink" href="#wi-fi-mqtt" title="Link to this heading"></a></h3>
+<p>在 RT-Thread Settings 或 <code class="docutils literal notranslate"><span class="pre">menuconfig</span></code> 中配置 Wi-Fi SSID/password、broker 地址/端口、topic、client ID 和可选认证信息。真实凭据保存在本地配置中。当模块固件不支持 <code class="docutils literal notranslate"><span class="pre">AT+CIPDOMAIN</span></code> DNS 查询时，使用数字 IPv4 broker 地址。</p>
+</section>
+<section id="id5">
+<h3>显示与摄像头<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Gino_display_lvgl</span></code> 自动启动 LVGL demo。<code class="docutils literal notranslate"><span class="pre">Gino_display_camera</span></code> 在 LVGL 初始化后请求预览，显示 QVGA RGB565 图像。使用 <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">stop</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ov7670_preview</span> <span class="pre">start</span></code> 控制预览。LCD 帧缓冲位于 SDRAM 预留区，应用动态内存应从配置的 heap 分配。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../../_navigation/guides_zh.html" class="btn btn-neutral float-left" title="开发指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../../_navigation/getting_started_zh.html" class="btn btn-neutral float-right" title="快速开始" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, CYFS。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+      <aside class="sdk-page-outline" role="navigation" aria-label="Local table of contents">
+        <div class="sdk-page-outline__title">目录</div>
+        <ul class="sdk-page-outline__list" aria-label="Article sections"></ul>
+        
+        <div class="sdk-page-outline__fallback" hidden><ul>
+<li><a class="reference internal" href="#">GD32H77D Gino SDK 使用指南</a><ul>
+<li><a class="reference internal" href="#id1">1. 平台与开发环境</a><ul>
+<li><a class="reference internal" href="#sdk">SDK 目录</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">2. 硬件映射</a></li>
+<li><a class="reference internal" href="#id3">3. 内存与下载布局</a></li>
+<li><a class="reference internal" href="#rt-thread-studio">4. RT-Thread Studio</a></li>
+<li><a class="reference internal" href="#env-mdk">5. Env 与 MDK</a><ul>
+<li><a class="reference internal" href="#env-gcc">5.1 Env 与 GCC</a></li>
+<li><a class="reference internal" href="#mdk5-arm-compiler-6">5.2 MDK5 与 Arm Compiler 6</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">6. 示例使用</a><ul>
+<li><a class="reference internal" href="#flash">Flash 文件系统</a></li>
+<li><a class="reference internal" href="#wi-fi-mqtt">Wi-Fi 与 MQTT</a></li>
+<li><a class="reference internal" href="#id5">显示与摄像头</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </aside>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> 版本：1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        构建时间：<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>

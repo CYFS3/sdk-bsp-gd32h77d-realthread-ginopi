@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>显示与摄像头 &mdash; GD32H77D Gino SDK</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/version_menu.css?v=7fd031d4" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=61cdd2cf" />
+      <link rel="stylesheet" type="text/css" href="../_static/pdf_button.css?v=b2b664f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/language_switch.css?v=e0239f85" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode.css?v=19a577d0" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=86952a2f"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/version_menu.js?v=d872e31e"></script>
+      <script src="../_static/download_pdf.js?v=a35b4182"></script>
+      <script src="../_static/version_info.js?v=193afac8"></script>
+      <script src="../_static/language_switch.js?v=d198989a"></script>
+      <script src="../_static/navigation_state.js?v=e7dbc4e8"></script>
+      <script src="../_static/page_outline.js?v=bcc2396b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Gino_display_camera" href="../projects/Gino_display_camera/README_zh.html" />
+    <link rel="prev" title="Gino_driver_usb_host" href="../projects/Gino_driver_usb_host/README_zh.html" />
+   
+  
+    <script>
+      window.DOCS_LANGUAGE = {"available": ["zh", "en"], "current": "zh", "enabled": true, "target_docname": "_navigation/display", "target_language": "en", "target_url": "display.html"};
+      
+        window.DOCS_LANGUAGE.targetUrl = "display.html";
+      
+    </script>
+  
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index_zh.html" class="icon icon-home">
+            GD32H77D-Gino
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+  <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guides_zh.html">开发指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../docs/project-guide/README_zh.html">GD32H77D Gino SDK 使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_zh.html">快速开始</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_template/README_zh.html">Gino_template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drivers_zh.html">外设驱动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_can/README_zh.html">Gino_driver_can</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_eth/README_zh.html">Gino_driver_eth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_i2c/README_zh.html">Gino_driver_i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_pwm/README_zh.html">Gino_driver_pwm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_qspi_flash/README_zh.html">Gino_driver_qspi_flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_rtc/README_zh.html">Gino_driver_rtc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdcard/README_zh.html">Gino_driver_sdcard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_sdram/README_zh.html">Gino_driver_sdram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_spi/README_zh.html">Gino_driver_spi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_device/README_zh.html">Gino_driver_usb_device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_driver_usb_host/README_zh.html">Gino_driver_usb_host</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">显示与摄像头</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html">Gino_display_camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html">Gino_display_lvgl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="components_zh.html">组件示例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_component_mqtt/README_zh.html">Gino_component_mqtt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="factory_zh.html">出厂演示</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_factory/README_zh.html">Gino_factory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index_zh.html">GD32H77D-Gino</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  <div class="sdk-reading-layout">
+    <div class="sdk-reading-main">
+      
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index_zh.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">显示与摄像头</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>显示与摄像头<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html">Gino_display_camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id1">1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id2">2. 采集与显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id3">3. 内存要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id4">4. 设备接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id5">5. 硬件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id6">6. 示例使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_camera/README_zh.html#id7">7. 预期效果</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html">Gino_display_lvgl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id1">1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#lvgl">2. LVGL 渲染、输入与双缓冲详解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#gd32h77d-sdramtli-dsi-i2c3">3. GD32H77D 的 SDRAM、TLI/DSI 与 I2C3 特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#rt-thread-lvglgraphic-touch">4. RT-Thread LVGL、Graphic 与 Touch 设备接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id2">5. 硬件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id3">6. 工程示例说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id4">6.1 运行命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id5">6.2 运行步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id6">7. 运行效果</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../projects/Gino_display_lvgl/README_zh.html#id7">7.1 预期现象</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../projects/Gino_driver_usb_host/README_zh.html" class="btn btn-neutral float-left" title="Gino_driver_usb_host" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../projects/Gino_display_camera/README_zh.html" class="btn btn-neutral float-right" title="Gino_display_camera" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, CYFS。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      
+    </div>
+  </div>
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+   
+  <div class="sdk-footer">
+    <div class="sdk-footer__inner">
+      <div class="sdk-footer__left">
+        <strong>GD32H77D-Gino</strong>
+        <span class="sdk-footer__sep">•</span> 版本：1.0.0
+      </div>
+      <div class="sdk-footer__right">
+        构建时间：<span id="sdk-build-time"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try {
+        var el = document.getElementById('sdk-build-time');
+        if (el) {
+          var d = new Date(document.lastModified);
+          el.textContent = d.toLocaleString();
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+
+</body>
+</html>
