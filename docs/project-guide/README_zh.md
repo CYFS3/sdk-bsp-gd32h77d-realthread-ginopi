@@ -69,7 +69,7 @@
 | SRAM1 | `0x30004000` | 16 KiB | 以太网 DMA 描述符和缓冲 |
 | SDRAM | `0xC0000000` | 32 MiB | 显示缓冲和扩展 heap |
 
-应用向量表位于 `0x08010000`，`0x08000000` 的启动入口用于兼容不同芯片版本。下载时使用 ELF/AXF 或 Intel HEX，以保留镜像的加载地址。
+应用向量表位于 `0x08010000`，`0x08000000` 的启动入口用于兼容不同芯片版本。默认生成的 BIN 镜像包含该启动入口，应用向量表位于镜像偏移 `0x10000`。将完整 BIN 镜像下载到 `0x08000000`。
 
 启用 `BSP_USING_LCD_MIPI` 时，SDRAM 前 3 MiB 为预留区，扩展 heap 从 `0xC0300000` 开始；未启用 LCD 时，SDRAM heap 从 `0xC0000000` 开始。摄像头采集和预览缓冲使用内部 AXI SRAM，与 SDRAM 显示区域分开管理。
 
@@ -80,7 +80,7 @@
 3. 选择 `Gino_template` 或 15 个示例中的一个。
 4. 在 RT-Thread Settings 中配置需要的外设和软件包，使用 GNU Arm Embedded 13.3 构建。
 5. 连接 UART1，设置为 115200-8-N-1，并连接 SWD 下载器。
-6. 选择 DAP-Link、目标 `GD32H77DIW` 和 ELF 模式，下载 `rtthread.elf`；也可使用 Intel HEX。
+6. 选择 DAP-Link、目标 `GD32H77DIW` 和 BIN 模式，将下载起始地址设为 `0x08000000`，下载 `Debug/rtthread.bin`。SDK 默认使用这些下载设置，构建时保留 `Debug/rtthread.elf` 用于调试。
 7. 复位开发板，按下文运行对应示例。
 
 Studio 创建出的工程包含该示例需要的共享源码目录。
@@ -100,7 +100,7 @@ scons --pyconfig-silent
 scons -j8
 ```
 
-将工具链路径替换为包含 `arm-none-eabi-gcc` 的目录。`mklinks.bat` 为共享的 `rt-thread` 和 `libraries` 创建目录链接。SCons 构建生成 `rt-thread.elf`、`rtthread.hex` 和 `rtthread.bin`，下载时使用 ELF 或 HEX。
+将工具链路径替换为包含 `arm-none-eabi-gcc` 的目录。`mklinks.bat` 为共享的 `rt-thread` 和 `libraries` 创建目录链接。SCons 构建生成 `rt-thread.elf`、`rtthread.hex` 和 `rtthread.bin`，将 `rtthread.bin` 下载到 `0x08000000`。
 
 通过 `menuconfig` 修改功能后，使用 `scons --pyconfig-silent` 重新生成 `rtconfig.h`。需要重新生成 Eclipse 工程元数据时，执行 `scons --target=eclipse`。
 
