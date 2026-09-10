@@ -62,9 +62,12 @@ Each project contains its own configuration, Studio metadata, MDK5 project files
    ![Create a board project in RT-Thread Studio](figures/rt-thread-studio-project.png)
 
 3. Build with GNU Arm Embedded 13.3; connect the UART1 console at 115200-8-N-1.
-4. Connect DAP-Link, select target `GD32H77DIW` and ELF mode, then download `rtthread.elf`.
+4. Connect DAP-Link, select target `GD32H77DIW` and BIN mode, then download `Debug/rtthread.bin` at `0x08000000`.
+5. For debugging, configure the GDB executable from the GNU Arm Embedded 13.3 toolchain, as shown below.
 
-The application vector table is at `0x08010000`; the boot entry at `0x08000000` provides compatibility with different chip revisions. Use ELF/AXF or Intel HEX to preserve the image's load addresses.
+   ![Configure GDB from the GNU Arm Embedded 13.3 toolchain](figures/1789024939745.png)
+
+Studio builds generate `Debug/rtthread.bin` for download and retain `Debug/rtthread.elf` for debugging. The BIN image starts at the boot entry at `0x08000000`, which provides compatibility with different chip revisions; the application vector table is at offset `0x10000` within the image (`0x08010000` in Flash). Set the BIN download address to `0x08000000`.
 
 ## MDK5 Build
 

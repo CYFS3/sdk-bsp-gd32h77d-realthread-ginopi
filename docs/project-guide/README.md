@@ -69,7 +69,7 @@ Follow the corresponding project README for external module power, common ground
 | SRAM1 | `0x30004000` | 16 KiB | Ethernet DMA descriptors and buffers |
 | SDRAM | `0xC0000000` | 32 MiB | display buffers and extended heap |
 
-The application vector table uses `0x08010000`; a boot entry at `0x08000000` provides compatibility with different chip revisions. Download ELF/AXF or Intel HEX to preserve the image's load addresses.
+The application vector table uses `0x08010000`; a boot entry at `0x08000000` provides compatibility with different chip revisions. The default BIN image includes this boot entry and places the application vector table at offset `0x10000`. Download the complete BIN image at `0x08000000`.
 
 With `BSP_USING_LCD_MIPI` enabled, the first 3 MiB of SDRAM are reserved and the extended heap starts at `0xC0300000`. Without LCD, the SDRAM heap starts at `0xC0000000`. Camera capture and preview buffers use internal AXI SRAM, separately from the SDRAM display area.
 
@@ -80,7 +80,7 @@ With `BSP_USING_LCD_MIPI` enabled, the first 3 MiB of SDRAM are reserved and the
 3. Select `Gino_template` or one of the 15 examples.
 4. Configure peripherals and packages in RT-Thread Settings, then build with GNU Arm Embedded 13.3.
 5. Connect UART1 at 115200-8-N-1 and the SWD download adapter.
-6. Select DAP-Link, target `GD32H77DIW`, and ELF mode; download `rtthread.elf`. Intel HEX is also available.
+6. Select DAP-Link, target `GD32H77DIW`, and BIN mode; set the download start address to `0x08000000` and download `Debug/rtthread.bin`. These are the SDK's default download settings. Builds retain `Debug/rtthread.elf` for debugging.
 7. Reset the board and run the selected example as described below.
 
 Studio-created projects contain the shared source trees required by the selected example.
@@ -100,7 +100,7 @@ scons --pyconfig-silent
 scons -j8
 ```
 
-Replace the toolchain path with the directory containing `arm-none-eabi-gcc`. `mklinks.bat` creates links to the shared `rt-thread` and `libraries` directories. SCons produces `rt-thread.elf`, `rtthread.hex`, and `rtthread.bin`; use ELF or HEX for download.
+Replace the toolchain path with the directory containing `arm-none-eabi-gcc`. `mklinks.bat` creates links to the shared `rt-thread` and `libraries` directories. SCons produces `rt-thread.elf`, `rtthread.hex`, and `rtthread.bin`; download `rtthread.bin` at `0x08000000`.
 
 After changing features with `menuconfig`, regenerate `rtconfig.h` using `scons --pyconfig-silent`. Run `scons --target=eclipse` when Eclipse project metadata needs regeneration.
 

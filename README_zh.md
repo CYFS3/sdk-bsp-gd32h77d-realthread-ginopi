@@ -14,19 +14,19 @@
 
 ## 开发板资源
 
-| 项目       | 配置                                             |
-| ---------- | ------------------------------------------------ |
-| MCU        | GD32H77DIW，Arm Cortex-M7，最高 600 MHz          |
-| 时钟源     | 25 MHz HXTAL                                     |
-| 控制台     | UART1，PA2/PA3，AF7，115200-8-N-1                |
-| 运行指示灯 | PC4，默认每 500 ms 翻转                          |
-| 外部 SDRAM | 32 MiB，地址`0xC0000000`                       |
-| 板载 Flash | 8 MiB GD25Q64E QSPI Flash，连接 OSPI0            |
-| 显示       | 720 x 720 MIPI DSI LCD，FL7707N，RGB565          |
-| 触摸       | GT911，I2C3                                      |
-| 摄像头     | OV7670，QVGA RGB565，DCI + DMA                   |
-| 以太网     | ENET1 RMII，默认 PHY 地址 2                      |
-| Wi-Fi      | GD32VW553 AT 模块，UART4                         |
+| 项目       | 配置                                                            |
+| ---------- | --------------------------------------------------------------- |
+| MCU        | GD32H77DIW，Arm Cortex-M7，最高 600 MHz                         |
+| 时钟源     | 25 MHz HXTAL                                                    |
+| 控制台     | UART1，PA2/PA3，AF7，115200-8-N-1                               |
+| 运行指示灯 | PC4，默认每 500 ms 翻转                                         |
+| 外部 SDRAM | 32 MiB，地址`0xC0000000`                                      |
+| 板载 Flash | 8 MiB GD25Q64E QSPI Flash，连接 OSPI0                           |
+| 显示       | 720 x 720 MIPI DSI LCD，FL7707N，RGB565                         |
+| 触摸       | GT911，I2C3                                                     |
+| 摄像头     | OV7670，QVGA RGB565，DCI + DMA                                  |
+| 以太网     | ENET1 RMII，默认 PHY 地址 2                                     |
+| Wi-Fi      | GD32VW553 AT 模块，UART4                                        |
 | 下载       | SWD；Studio 使用 DAP-Link/PyOCD，MDK 使用 DAP-Link（CMSIS-DAP） |
 
 SDK 目录、工程选择、硬件连接和编译下载步骤见 [SDK 使用指南](docs/project-guide/README_zh.md)。
@@ -60,11 +60,13 @@ SDK 目录、工程选择、硬件连接和编译下载步骤见 [SDK 使用指�
 2. 选择“文件 -> 新建 -> RT-Thread 项目 -> 基于开发板”，选择 `GD32H77D-Gino`，创建示例工程或模板工程。
 
    ![RT-Thread Studio 创建开发板工程](figures/rt-thread-studio-project.png)
-
 3. 使用 GNU Arm Embedded 13.3 编译；连接 UART1 控制台，设置为 115200-8-N-1。
-4. 连接 DAP-Link，选择目标 `GD32H77DIW` 和 ELF 模式，下载 `rtthread.elf`。
+4. 连接 DAP-Link，选择目标 `GD32H77DIW` 和 BIN 模式，将 `Debug/rtthread.bin` 下载到 `0x08000000`。
+5. 如果需要调试的话请把调试的GDB设置为13.3
 
-应用向量表位于 `0x08010000`，`0x08000000` 的启动入口用于兼容不同芯片版本。使用 ELF/AXF 或 Intel HEX 下载，以保留镜像的加载地址。
+![1789024939745](figures/1789024939745.png)
+
+Studio 构建生成 `Debug/rtthread.bin` 用于下载，并保留 `Debug/rtthread.elf` 用于调试。BIN 镜像从 `0x08000000` 的启动入口开始，该入口用于兼容不同芯片版本；应用向量表位于镜像偏移 `0x10000`（Flash 地址 `0x08010000`）。BIN 下载起始地址应设为 `0x08000000`。
 
 ## MDK5 开发
 

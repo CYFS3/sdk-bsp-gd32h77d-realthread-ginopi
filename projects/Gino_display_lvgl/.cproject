@@ -342,7 +342,7 @@
               </tool>
               <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.506412204" name="GNU ARM Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver" />
               <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1461589245" name="GNU ARM Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash">
-                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.1937707052" name="Output file format (-O)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.ihex" valueType="enumerated" />
+                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.1937707052" name="Output file format (-O)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice" useByScannerDiscovery="false" value="ilg.gnuarmeclipse.managedbuild.cross.option.createflash.choice.binary" valueType="enumerated" />
               </tool>
               <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.82359725" name="GNU ARM Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
                 <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.601724476" name="Display source (--source|-S)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" value="true" valueType="boolean" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <launchConfiguration type="ilg.gnumcueclipse.debug.gdbjtag.pyocd.launchConfigurationType">
   <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.adapterName" value="DAP-LINK" />
-  <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.binFlashStartAddress" value="" />
+  <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.binFlashStartAddress" value="0x08000000" />
   <booleanAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.doContinue" value="true" />
   <booleanAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.doDebugInRam" value="false" />
   <booleanAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.doFirstReset" value="true" />
@@ -23,7 +23,7 @@
   <intAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.gdbServerTelnetPortNumber" value="4444" />
   <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.otherInitCommands" value="" />
   <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.otherRunCommands" value="" />
-  <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.programMode" value="ELF" />
+  <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.programMode" value="BIN" />
   <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.pyocd.secondResetType" value="halt" />
   <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.svdPath" value="" />
   <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageFileName" value="" />
